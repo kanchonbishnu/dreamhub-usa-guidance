@@ -42,29 +42,29 @@ export function BentoServiceCard({
         <motion.div
           whileHover={{ rotate: 360, scale: 1.2 }}
           transition={{ duration: 0.6 }}
-          className="mb-6"
+          className="mb-4 sm:mb-5 md:mb-6"
         >
-          <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary via-deep-blue to-secondary flex items-center justify-center glow-elegant">
-            <Icon className="w-8 h-8 text-white" />
+          <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-gradient-to-br from-primary via-deep-blue to-secondary flex items-center justify-center glow-elegant">
+            <Icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
           </div>
         </motion.div>
         
-        <h3 className={`font-bold mb-3 text-gradient
-          ${size === 'large' ? 'text-3xl' : 'text-xl'}`}>
+        <h3 className={`font-bold mb-2 sm:mb-3 text-gradient
+          ${size === 'large' ? 'text-xl sm:text-2xl md:text-3xl' : 'text-base sm:text-lg md:text-xl'}`}>
           {title}
         </h3>
         
-        <p className={`text-muted-foreground
-          ${size === 'large' ? 'text-lg' : 'text-sm'}`}>
+        <p className={`text-muted-foreground leading-relaxed
+          ${size === 'large' ? 'text-sm sm:text-base md:text-lg' : 'text-xs sm:text-sm md:text-base'}`}>
           {description}
         </p>
         
         <motion.div
-          className="mt-6 text-sm font-semibold text-primary group-hover:text-accent transition-colors flex items-center gap-2"
+          className="mt-4 sm:mt-5 md:mt-6 text-xs sm:text-sm font-semibold text-primary group-hover:text-accent transition-colors flex items-center gap-2"
           whileHover={{ x: 10 }}
         >
           <span>Explore</span>
-          <span className="text-lg">→</span>
+          <span className="text-base sm:text-lg">→</span>
         </motion.div>
       </div>
       
