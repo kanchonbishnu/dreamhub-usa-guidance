@@ -1,73 +1,81 @@
-# Welcome to your Lovable project
+# ⭐ DreamHub USA – Premium Dark-Themed Service Website  
+A modern, professional, dark-theme website template for a USA-based consulting and service platform.
 
-## Project info
+---
 
-**URL**: https://lovable.dev/projects/f933c74c-0690-4583-9da3-08957ab69ae3
+## 🌐 Live Website  
+🔗 **https://dreamhubusa.com**
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+# 📌 Overview  
+**DreamHub USA** is a premium, fully responsive, dark-themed frontend template created using:
 
-**Use Lovable**
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+- **Modern animations**
+- **USA-inspired colors**
+- **Premium UX design**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f933c74c-0690-4583-9da3-08957ab69ae3) and start prompting.
+The site is designed for agencies providing:
 
-Changes made via Lovable will be committed automatically to this repo.
+- Education Consulting  
+- Visa & Immigration Services  
+- Business Formation  
+- Documentation Support  
+- Digital & Branding Services  
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+# 🎨 Features
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 🔥 Modern Premium UI  
+- Professional dark theme  
+- Smooth animations (fade-up, slide, reveal)  
+- Elegant typography (Montserrat + Inter)  
+- Balanced spacing and visual hierarchy  
 
-Follow these steps:
+### 📱 Fully Responsive  
+- Mobile-first layout  
+- Adaptive navigation  
+- Optimized sections & grids  
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### 🧭 Structured Sections  
+- Hero Section  
+- About Us  
+- Services  
+- Why Choose Us  
+- Testimonials  
+- Contact  
+- Footer  
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### ⚡ Enhanced UX  
+- Sticky navigation  
+- Clean hover effects  
+- Subtle glow accents  
+- Scroll-based animations  
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+# 🎨 Brand Color Palette
 
-**Edit a file directly in GitHub**
+| Purpose        | Color Name    | Hex Code   |
+|----------------|---------------|------------|
+| Primary Blue   | Royal Blue    | `#1D4ED8`  |
+| Accent Red     | American Red  | `#C62828`  |
+| Gold Highlight | Premium Gold  | `#D4AF37`  |
+| Text Light     | Soft White    | `#F3F4F6`  |
+| Text Subdued   | Cool Gray     | `#9CA3AF`  |
+| Background     | Deep Navy     | `#0B0F19`  |
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/f933c74c-0690-4583-9da3-08957ab69ae3) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+# 📁 Folder Structure
+dreamhubusa/
+│
+├── index.html # Main landing page
+├── styles.css # Global styles, dark theme, animations
+├── script.js # Navigation toggle, animations, interactions
+├── assets/ # Images, icons, logo files
+└── README.md # Project documentation
