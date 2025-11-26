@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Scene3D } from '@/components/3d/Scene3D';
 import { PremiumFloatingParticles } from '@/components/PremiumFloatingParticles';
+import { TypewriterText } from '@/components/TypewriterText';
 import { VisaTypeCard } from '@/components/VisaTypeCard';
 import { TimelineStep } from '@/components/TimelineStep';
 import { BentoServiceCard } from '@/components/BentoServiceCard';
@@ -168,15 +169,12 @@ const Home = () => {
               DreamHubUSA
             </motion.h1>
             
-            <motion.p
+            <TypewriterText
+              text="Empowering Your American Dream."
               className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-2 sm:mb-3 md:mb-4 font-semibold tracking-tight px-2"
-              style={{ color: '#FFFFFF' }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3 }}
-            >
-              Premier U.S. Visa Advisory
-            </motion.p>
+              typingSpeed={80}
+              cursorBlinkSpeed={0.8}
+            />
             
             <motion.p
               className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 md:mb-12 max-w-2xl mx-auto px-6 sm:px-8 leading-relaxed"
