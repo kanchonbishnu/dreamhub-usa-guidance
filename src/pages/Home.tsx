@@ -149,16 +149,14 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            {/* Premium DreamHubUSA headline - Enhanced */}
+            {/* Premium DreamHubUSA headline - Deep Black */}
             <motion.h1
               className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold mb-6 sm:mb-8 md:mb-10 leading-none px-2"
               style={{ 
-                background: 'linear-gradient(135deg, #0F1A45 0%, #1D4ED8 50%, #3B82F6 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
+                color: '#0A0A0A',
                 letterSpacing: '-0.025em',
-                filter: 'drop-shadow(0 0 40px rgba(255, 255, 255, 0.8)) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4))',
+                textShadow: '0 2px 8px rgba(0, 0, 0, 0.15), 0 0 30px rgba(255, 255, 255, 0.4)',
+                filter: 'drop-shadow(0 4px 12px rgba(0, 0, 0, 0.08))',
               }}
               initial={{ opacity: 0, y: 30, scale: 0.95 }}
               animate={{ 
@@ -172,35 +170,7 @@ const Home = () => {
                 delay: 0.2
               }}
             >
-              <span className="relative inline-block">
-                {/* White glow layer */}
-                <span 
-                  className="absolute inset-0 blur-2xl"
-                  style={{ 
-                    background: 'linear-gradient(135deg, #0F1A45 0%, #1D4ED8 50%, #3B82F6 100%)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text',
-                    opacity: 0.6,
-                  }}
-                  aria-hidden="true"
-                >
-                  DreamHubUSA
-                </span>
-                {/* Main text with enhanced visibility */}
-                <span 
-                  className="relative"
-                  style={{
-                    background: 'linear-gradient(135deg, #0F1A45 0%, #1D4ED8 50%, #3B82F6 100%)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text',
-                    filter: 'drop-shadow(0 2px 6px rgba(15, 26, 69, 0.5))',
-                  }}
-                >
-                  DreamHubUSA
-                </span>
-              </span>
+              DreamHubUSA
             </motion.h1>
 
             {/* Enhanced sub-headline */}
