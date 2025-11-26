@@ -134,78 +134,6 @@ const Home = () => {
           background: 'linear-gradient(180deg, hsl(210 40% 96%) 0%, hsl(215 89% 98%) 40%, hsl(214 95% 96%) 100%)'
         }}
       >
-        {/* Decorative background elements */}
-        <div className="absolute inset-0 opacity-40">
-          <motion.div 
-            className="absolute top-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl"
-            animate={{ 
-              scale: [1, 1.2, 1],
-              x: [0, 50, 0],
-              y: [0, 30, 0]
-            }}
-            transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <motion.div 
-            className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"
-            animate={{ 
-              scale: [1, 1.3, 1],
-              x: [0, -50, 0],
-              y: [0, -30, 0]
-            }}
-            transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <motion.div 
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-accent/5 rounded-full blur-3xl"
-            animate={{ 
-              scale: [1, 1.4, 1],
-              rotate: [0, 180, 360]
-            }}
-            transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-          />
-        </div>
-        
-        {/* 3D Scene Background */}
-        <div className="absolute inset-0 h-[500px] sm:h-[600px] md:h-[700px] lg:h-full opacity-30">
-          <Suspense fallback={null}>
-            <Scene3D />
-          </Suspense>
-        </div>
-        
-        {/* Animated particles */}
-        <div className="absolute inset-0 opacity-25">
-          {[...Array(30)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute rounded-full"
-              style={{ 
-                width: Math.random() * 4 + 2 + 'px',
-                height: Math.random() * 4 + 2 + 'px',
-                backgroundColor: i % 3 === 0 ? 'hsl(215 89% 52%)' : i % 3 === 1 ? 'hsl(214 95% 36%)' : 'hsl(224 76% 48%)',
-              }}
-              initial={{
-                x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1920),
-                y: -50,
-                scale: 0,
-              }}
-              animate={{
-                y: typeof window !== 'undefined' ? window.innerHeight + 50 : 1080,
-                x: [
-                  null,
-                  Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1920),
-                ],
-                scale: [0, 1, 1, 0],
-                opacity: [0, 1, 1, 0],
-              }}
-              transition={{
-                duration: Math.random() * 10 + 8,
-                repeat: Infinity,
-                ease: 'easeInOut',
-                delay: Math.random() * 5,
-              }}
-            />
-          ))}
-        </div>
-
         {/* Hero Content */}
         <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
           <motion.div
@@ -287,38 +215,6 @@ const Home = () => {
           </motion.div>
         </div>
 
-        {/* Floating UI elements */}
-        <motion.div
-          className="hidden md:block absolute top-20 left-4 md:left-10 p-3 md:p-4 rounded-2xl shadow-lg"
-          style={{ 
-            background: 'rgba(255, 255, 255, 0.9)',
-            border: '1px solid hsl(215 89% 52% / 0.2)'
-          }}
-          animate={{ 
-            y: [0, -20, 0],
-            rotate: [0, 10, -10, 0],
-            scale: [1, 1.1, 1]
-          }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <Globe2 className="w-6 h-6 md:w-8 md:h-8" style={{ color: 'hsl(215 89% 52%)' }} />
-        </motion.div>
-        
-        <motion.div
-          className="hidden md:block absolute bottom-32 right-4 md:right-20 p-3 md:p-4 rounded-2xl shadow-lg"
-          style={{ 
-            background: 'rgba(255, 255, 255, 0.9)',
-            border: '1px solid hsl(214 95% 36% / 0.2)'
-          }}
-          animate={{ 
-            y: [0, 20, 0],
-            rotate: [0, -10, 10, 0],
-            scale: [1, 1.15, 1]
-          }}
-          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <Target className="w-6 h-6 md:w-8 md:h-8" style={{ color: 'hsl(214 95% 36%)' }} />
-        </motion.div>
       </section>
 
       {/* Interactive Visa Type Selection */}
