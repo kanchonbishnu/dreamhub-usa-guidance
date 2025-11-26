@@ -2,7 +2,7 @@ import { Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Scene3D } from '@/components/3d/Scene3D';
-import { PremiumGradientBackground } from '@/components/PremiumGradientBackground';
+import { AnimatedGeometricBackground } from '@/components/AnimatedGeometricBackground';
 import { VisaTypeCard } from '@/components/VisaTypeCard';
 import { TimelineStep } from '@/components/TimelineStep';
 import { BentoServiceCard } from '@/components/BentoServiceCard';
@@ -131,8 +131,8 @@ const Home = () => {
     <div className="min-h-screen overflow-hidden">
       {/* Hero Section with 3D Globe */}
       <section className="relative min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-screen flex items-center justify-center overflow-hidden pt-16">
-        {/* Premium Gradient Background */}
-        <PremiumGradientBackground />
+        {/* Animated Geometric Background */}
+        <AnimatedGeometricBackground />
         
         {/* Hero Content */}
         <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
