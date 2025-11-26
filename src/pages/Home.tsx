@@ -149,17 +149,15 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            {/* Premium royal-blue headline */}
+            {/* Premium DreamHubUSA headline */}
             <motion.h1
-              className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-6 sm:mb-8 md:mb-10 leading-tight px-2"
+              className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-6 sm:mb-8 md:mb-10 leading-none px-2"
               style={{ 
                 background: 'linear-gradient(135deg, #1E40AF 0%, #2563EB 50%, #3B82F6 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
                 letterSpacing: '-0.02em',
-                textShadow: '0 0 40px rgba(255, 255, 255, 0.8), 0 0 20px rgba(59, 130, 246, 0.5), 0 2px 4px rgba(30, 64, 175, 0.3)',
-                filter: 'drop-shadow(0 0 30px rgba(255, 255, 255, 0.6)) drop-shadow(0 2px 8px rgba(30, 64, 175, 0.4))',
               }}
               initial={{ opacity: 0, y: 30, scale: 0.95 }}
               animate={{ 
@@ -173,7 +171,24 @@ const Home = () => {
                 delay: 0.2
               }}
             >
-              DreamHubUSA
+              <span className="relative inline-block">
+                <span 
+                  className="absolute inset-0 blur-xl opacity-50"
+                  style={{ 
+                    background: 'linear-gradient(135deg, #1E40AF 0%, #2563EB 50%, #3B82F6 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                  }}
+                >
+                  DreamHubUSA
+                </span>
+                <span className="relative" style={{ 
+                  filter: 'drop-shadow(0 2px 4px rgba(30, 64, 175, 0.3)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.5))'
+                }}>
+                  DreamHubUSA
+                </span>
+              </span>
             </motion.h1>
 
             {/* Enhanced sub-headline */}
