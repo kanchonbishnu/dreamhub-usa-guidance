@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Scene3D } from '@/components/3d/Scene3D';
 import { FlowingWaves } from '@/components/FlowingWaves';
+import { SparkleParticles } from '@/components/SparkleParticles';
 import { TypewriterText } from '@/components/TypewriterText';
 import { VisaTypeCard } from '@/components/VisaTypeCard';
 import { TimelineStep } from '@/components/TimelineStep';
@@ -134,6 +135,9 @@ const Home = () => {
       <section className="relative min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Flowing Waves Background */}
         <FlowingWaves />
+        
+        {/* Sparkle Particles */}
+        <SparkleParticles />
         
         {/* Hero Content */}
         <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
