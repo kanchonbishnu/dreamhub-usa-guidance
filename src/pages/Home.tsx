@@ -129,27 +129,39 @@ const Home = () => {
   return (
     <div className="min-h-screen overflow-hidden">
       {/* Hero Section with 3D Globe */}
-      <section className="relative min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-screen flex items-center justify-center overflow-hidden pt-16">
+      <section className="relative min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-screen flex items-center justify-center overflow-hidden pt-16"
+        style={{
+          background: 'linear-gradient(180deg, hsl(210 40% 96%) 0%, hsl(215 89% 98%) 40%, hsl(214 95% 96%) 100%)'
+        }}
+      >
+        {/* Decorative background elements */}
+        <div className="absolute inset-0 opacity-40">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+        </div>
+        
         {/* 3D Scene Background */}
-        <div className="absolute inset-0 h-[500px] sm:h-[600px] md:h-[700px] lg:h-full">
+        <div className="absolute inset-0 h-[500px] sm:h-[600px] md:h-[700px] lg:h-full opacity-30">
           <Suspense fallback={null}>
             <Scene3D />
           </Suspense>
         </div>
         
         {/* Animated particles */}
-        <div className="absolute inset-0 opacity-30">
+        <div className="absolute inset-0 opacity-20">
           {[...Array(50)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-1 h-1 bg-primary rounded-full"
+              className="absolute w-1 h-1 rounded-full"
+              style={{ backgroundColor: 'hsl(215 89% 52%)' }}
               initial={{
                 x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1920),
                 y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1080),
               }}
               animate={{
                 y: [null, Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1080)],
-                opacity: [0, 1, 0],
+                opacity: [0, 0.6, 0],
               }}
               transition={{
                 duration: Math.random() * 5 + 5,
@@ -236,7 +248,11 @@ const Home = () => {
 
         {/* Floating UI elements */}
         <motion.div
-          className="hidden md:block absolute top-20 left-4 md:left-10 glass-morphism p-3 md:p-4 rounded-2xl"
+          className="hidden md:block absolute top-20 left-4 md:left-10 p-3 md:p-4 rounded-2xl shadow-lg"
+          style={{ 
+            background: 'rgba(255, 255, 255, 0.9)',
+            border: '1px solid hsl(215 89% 52% / 0.2)'
+          }}
           animate={{ y: [0, -20, 0] }}
           transition={{ duration: 4, repeat: Infinity }}
         >
@@ -244,7 +260,11 @@ const Home = () => {
         </motion.div>
         
         <motion.div
-          className="hidden md:block absolute bottom-32 right-4 md:right-20 glass-morphism p-3 md:p-4 rounded-2xl"
+          className="hidden md:block absolute bottom-32 right-4 md:right-20 p-3 md:p-4 rounded-2xl shadow-lg"
+          style={{ 
+            background: 'rgba(255, 255, 255, 0.9)',
+            border: '1px solid hsl(214 95% 36% / 0.2)'
+          }}
           animate={{ y: [0, 20, 0] }}
           transition={{ duration: 5, repeat: Infinity }}
         >
