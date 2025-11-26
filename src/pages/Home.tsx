@@ -25,95 +25,95 @@ const Home = () => {
   const visaTypes = [
     {
       icon: GraduationCap,
-      title: 'Student Visa (F-1)',
-      description: 'Complete support for university applications, I-20, SEVIS, and visa interview preparation.',
+      title: 'F-1 Student Visa',
+      description: 'Comprehensive university placement, I-20 processing, and SEVIS compliance. Expert guidance from application to visa approval.',
     },
     {
       icon: Plane,
-      title: 'Tourist Visa (B1/B2)',
-      description: 'Tourism and business travel guidance with itinerary planning and documentation support.',
+      title: 'B1/B2 Visitor Visa',
+      description: 'Strategic travel documentation, itinerary planning, and interview preparation for business and tourism visits.',
     },
     {
       icon: FileCheck,
-      title: 'DS-160 Assistance',
-      description: 'Accurate form completion to avoid common mistakes that lead to delays or denials.',
+      title: 'DS-160 Excellence',
+      description: 'Precision form completion with zero-error guarantee. Every detail verified to maximize approval chances.',
     },
   ];
 
   const timelineSteps = [
     {
-      title: 'Initial Consultation',
-      description: 'We evaluate your profile, goals, and documentation to create a personalized roadmap.',
+      title: 'Strategic Assessment',
+      description: 'Comprehensive profile evaluation and personalized roadmap development tailored to your unique goals.',
     },
     {
-      title: 'Document Preparation',
-      description: 'Gather and organize all required documents with our comprehensive checklist.',
+      title: 'Document Excellence',
+      description: 'Meticulous preparation and organization of all required materials with our expert checklist system.',
     },
     {
       title: 'Application Processing',
-      description: 'Complete DS-160 forms, SEVIS registration, and all necessary paperwork accurately.',
+      description: 'Flawless DS-160 completion, SEVIS registration, and comprehensive paperwork management.',
     },
     {
-      title: 'Interview Coaching',
-      description: 'Practice with mock interviews and receive expert feedback to boost confidence.',
+      title: 'Interview Mastery',
+      description: 'Intensive coaching with proven techniques, mock interviews, and expert feedback to ensure confidence.',
     },
     {
-      title: 'Visa Success',
-      description: 'Receive your visa and get pre-departure guidance for your journey to the USA.',
+      title: 'Visa Approval & Beyond',
+      description: 'Successful visa acquisition with complete pre-departure guidance for your seamless journey to America.',
     },
   ];
 
   const services = [
     {
       icon: School,
-      title: 'University Selection',
-      description: 'Find the perfect institution matching your budget, background, and career goals.',
+      title: 'Elite University Placement',
+      description: 'Strategic matching with top-tier institutions aligned with your academic goals and financial parameters.',
       size: 'large' as const,
     },
     {
       icon: FileCheck,
-      title: 'DS-160 Forms',
-      description: 'Professional assistance with accurate form completion.',
+      title: 'DS-160 Mastery',
+      description: 'Expert precision in every form field with comprehensive review.',
       size: 'small' as const,
     },
     {
       icon: MessageSquare,
-      title: 'Interview Prep',
-      description: 'Mock interviews with real-world scenarios.',
+      title: 'Interview Excellence',
+      description: 'Proven strategies with real-world scenario preparation.',
       size: 'small' as const,
     },
     {
       icon: MapPin,
-      title: 'Travel Planning',
-      description: 'Complete itinerary and pre-departure support.',
+      title: 'Travel Strategy',
+      description: 'Complete itinerary design and comprehensive travel planning.',
       size: 'small' as const,
     },
     {
       icon: Shield,
-      title: 'Document Review',
-      description: 'Thorough verification of all application materials.',
+      title: 'Document Verification',
+      description: 'Rigorous quality assurance for all application materials.',
       size: 'small' as const,
     },
     {
       icon: Award,
-      title: 'Success Coaching',
-      description: 'Personalized strategies for visa approval.',
+      title: 'Success Optimization',
+      description: 'Data-driven strategies proven to maximize visa approval rates.',
       size: 'large' as const,
     },
   ];
 
   const testimonials = [
     {
-      quote: 'DreamHubUSA made my visa process so much easier. Their interview coaching helped me get my student visa on the first attempt.',
-      author: 'Aisha, Nigeria',
+      quote: 'DreamHubUSA delivered exceptional guidance throughout my F-1 visa process. Their interview preparation was instrumental in my first-attempt approval.',
+      author: 'Aisha M., Nigeria',
     },
     {
-      quote: 'Professional, fast, and very trustworthy. The 3D interactive guidance was amazing!',
-      author: 'Rahul, India',
+      quote: 'Highly professional service with outstanding attention to detail. Their strategic approach made all the difference.',
+      author: 'Rahul S., India',
     },
     {
-      quote: 'The holographic consultation experience was like nothing I\'ve seen before. Highly recommend!',
-      author: 'Maria, Brazil',
+      quote: 'The expertise and personalized support I received exceeded all expectations. A truly premium consulting experience.',
+      author: 'Maria L., Brazil',
     },
   ];
 
@@ -159,35 +159,36 @@ const Home = () => {
             transition={{ duration: 1 }}
           >
             <motion.h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 md:mb-6 text-gradient"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 md:mb-6 text-gradient leading-tight"
               animate={{ 
                 textShadow: [
-                  '0 0 20px hsl(var(--neon-blue) / 0.5)',
-                  '0 0 40px hsl(var(--neon-purple) / 0.5)',
-                  '0 0 20px hsl(var(--neon-blue) / 0.5)',
+                  '0 4px 20px hsl(var(--navy-blue) / 0.3)',
+                  '0 4px 30px hsl(var(--deep-blue) / 0.4)',
+                  '0 4px 20px hsl(var(--navy-blue) / 0.3)',
                 ]
               }}
-              transition={{ duration: 3, repeat: Infinity }}
+              transition={{ duration: 4, repeat: Infinity }}
             >
               DreamHubUSA
             </motion.h1>
             
             <motion.p
-              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-3 md:mb-4 text-neon"
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-3 md:mb-4 font-semibold tracking-tight"
+              style={{ color: 'hsl(var(--foreground))' }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
             >
-              Your Pathway to the USA
+              Premier U.S. Visa Advisory
             </motion.p>
             
             <motion.p
-              className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 md:mb-12 max-w-2xl mx-auto px-4"
+              className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 md:mb-12 max-w-2xl mx-auto px-4 leading-relaxed"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
             >
-              Advanced visa guidance with expert support. Experience the future of visa consulting.
+              Expert guidance and strategic support for F-1 student visas, B1/B2 visitor visas, and comprehensive U.S. immigration services.
             </motion.p>
 
             <motion.div
@@ -197,22 +198,20 @@ const Home = () => {
             >
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-primary via-secondary to-accent hover:shadow-2xl text-white text-base sm:text-lg md:text-xl px-6 sm:px-8 md:px-12 py-4 sm:py-6 md:py-8 rounded-full font-bold neon-glow group relative overflow-hidden"
+                className="bg-gradient-to-r from-primary via-deep-blue to-secondary hover:shadow-2xl text-white text-base sm:text-lg md:text-xl px-6 sm:px-8 md:px-12 py-4 sm:py-6 md:py-8 rounded-full font-bold glow-elegant hover:glow-premium transition-all duration-500 group relative overflow-hidden"
               >
                 <motion.span
                   className="relative z-10"
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={{ scale: 1.05 }}
                 >
                   <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 sm:gap-3">
+                    <Shield className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+                    <span className="whitespace-nowrap font-semibold">Begin Your Journey</span>
                     <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
-                    <span className="whitespace-nowrap">Start Your Journey</span>
-                    <Zap className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
                   </a>
                 </motion.span>
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-accent via-primary to-secondary"
-                  animate={{ x: ['0%', '100%', '0%'] }}
-                  transition={{ duration: 3, repeat: Infinity }}
+                  className="absolute inset-0 bg-gradient-to-r from-deep-blue via-primary to-royal-blue opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 />
               </Button>
             </motion.div>
@@ -248,11 +247,11 @@ const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-12 md:mb-16 lg:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 text-gradient px-4">
-              Choose Your Visa Type
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 text-gradient px-4 leading-tight">
+              Select Your Visa Pathway
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
-              Select the pathway that matches your American dream
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4 leading-relaxed">
+              Choose the service that aligns with your American aspirations
             </p>
           </motion.div>
 
@@ -282,11 +281,11 @@ const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-12 md:mb-16 lg:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 text-gradient px-4">
-              Your Journey Timeline
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 text-gradient px-4 leading-tight">
+              Your Success Timeline
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
-              A step-by-step roadmap to visa success
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4 leading-relaxed">
+              A proven, step-by-step methodology for visa approval
             </p>
           </motion.div>
 
@@ -314,11 +313,11 @@ const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-12 md:mb-16 lg:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 text-gradient px-4">
-              Our Services
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 text-gradient px-4 leading-tight">
+              Comprehensive Services
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
-              Comprehensive visa support tailored to your needs
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4 leading-relaxed">
+              Elite visa consulting tailored to your individual requirements
             </p>
           </motion.div>
 
@@ -341,11 +340,11 @@ const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-12 md:mb-16 lg:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 text-gradient px-4">
-              Success Stories
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 text-gradient px-4 leading-tight">
+              Client Success Stories
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
-              Real experiences from our satisfied clients
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4 leading-relaxed">
+              Trusted by hundreds of successful visa applicants worldwide
             </p>
           </motion.div>
 
@@ -409,10 +408,7 @@ const Home = () => {
                   </a>
                 </span>
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-accent to-primary"
-                  initial={{ x: '-100%' }}
-                  whileHover={{ x: '100%' }}
-                  transition={{ duration: 0.5 }}
+                  className="absolute inset-0 bg-gradient-to-r from-deep-blue to-royal-blue opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 />
               </Button>
             </motion.div>
