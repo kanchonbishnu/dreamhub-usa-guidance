@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { LucideIcon } from 'lucide-react';
 
 interface BentoServiceCardProps {
@@ -7,6 +8,7 @@ interface BentoServiceCardProps {
   description: string;
   size?: 'small' | 'large';
   index: number;
+  link: string;
 }
 
 export function BentoServiceCard({ 
@@ -14,24 +16,25 @@ export function BentoServiceCard({
   title, 
   description, 
   size = 'small',
-  index 
+  index,
+  link 
 }: BentoServiceCardProps) {
   return (
-    <motion.div
+    <Link to={link}>
+      <motion.div
       initial={{ opacity: 0, scale: 0.8 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.05 }}
-      whileHover={{ 
-        scale: 1.05, 
-        rotateZ: size === 'large' ? 0 : 2,
-        boxShadow: '0 0 40px hsl(var(--neon-purple) / 0.6)' 
-      }}
-      className={`glass-morphism rounded-3xl p-8 cursor-pointer group relative overflow-hidden
-        ${size === 'large' ? 'col-span-2 row-span-2' : ''}`}
+        whileHover={{ 
+          scale: 1.05, 
+          rotateZ: size === 'large' ? 0 : 2,
+        }}
+        className={`glass-morphism rounded-3xl p-8 cursor-pointer group relative overflow-hidden hover:shadow-2xl transition-all duration-500
+          ${size === 'large' ? 'col-span-1 md:col-span-2 row-span-1 md:row-span-2' : ''}`}
     >
       {/* Animated background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-deep-blue/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
       
       {/* Holographic effect */}
       <div className="absolute inset-0 holographic opacity-0 group-hover:opacity-100" />
@@ -42,7 +45,7 @@ export function BentoServiceCard({
           transition={{ duration: 0.6 }}
           className="mb-6"
         >
-          <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center neon-glow">
+          <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary via-deep-blue to-secondary flex items-center justify-center glow-elegant">
             <Icon className="w-8 h-8 text-white" />
           </div>
         </motion.div>
@@ -58,15 +61,17 @@ export function BentoServiceCard({
         </p>
         
         <motion.div
-          className="mt-6 text-sm font-semibold text-secondary group-hover:text-primary transition-colors"
+          className="mt-6 text-sm font-semibold text-primary group-hover:text-accent transition-colors flex items-center gap-2"
           whileHover={{ x: 10 }}
         >
-          Explore →
+          <span>Explore</span>
+          <span className="text-lg">→</span>
         </motion.div>
       </div>
       
       {/* Corner accent */}
       <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/20 to-transparent rounded-bl-full" />
-    </motion.div>
+      </motion.div>
+    </Link>
   );
 }
