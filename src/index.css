@@ -8,8 +8,8 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Professional American Color Palette - Light Theme */
-    --background: 0 0% 98%;
+    /* Professional Light Theme - Clean & Modern */
+    --background: 0 0% 100%;
     --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
@@ -24,17 +24,17 @@ All colors MUST be HSL.
     --secondary: 0 72% 51%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 45%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
 
-    --accent: 45 100% 59%;
-    --accent-foreground: 222 47% 11%;
+    --accent: 45 93% 47%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
     --ring: 217 91% 60%;
 
     --radius: 1rem;
@@ -43,36 +43,36 @@ All colors MUST be HSL.
     --navy-blue: 217 91% 60%;
     --deep-blue: 220 90% 56%;
     --royal-blue: 224 76% 48%;
-    --gold-accent: 45 100% 59%;
+    --gold-accent: 45 93% 47%;
     --crimson-red: 0 72% 51%;
     
-    /* Gradients and effects */
+    /* Light theme gradients */
     --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(220 90% 56%) 50%, hsl(224 76% 48%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(45 100% 59%) 0%, hsl(45 100% 70%) 50%, hsl(45 100% 59%) 100%);
-    --gradient-hero: radial-gradient(ellipse at top, hsl(217 91% 60% / 0.15) 0%, transparent 60%),
-                     radial-gradient(ellipse at bottom, hsl(220 90% 56% / 0.1) 0%, transparent 60%);
+    --gradient-gold: linear-gradient(135deg, hsl(45 93% 47%) 0%, hsl(45 93% 57%) 50%, hsl(45 93% 47%) 100%);
+    --gradient-hero: radial-gradient(ellipse at top, hsl(217 91% 97%) 0%, transparent 60%),
+                     radial-gradient(ellipse at bottom right, hsl(45 93% 97%) 0%, transparent 60%);
     
-    --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --card-shadow-hover: 0 20px 25px -5px rgb(0 0 0 / 0.2), 0 8px 10px -6px rgb(0 0 0 / 0.15);
-    --card-shadow-premium: 0 10px 40px -10px hsl(217 91% 60% / 0.4), 0 0 25px -5px hsl(217 91% 60% / 0.2);
+    --card-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --card-shadow-hover: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --card-shadow-premium: 0 10px 40px -10px hsl(217 91% 60% / 0.3), 0 0 25px -5px hsl(217 91% 60% / 0.15);
     
-    --glass-bg: rgba(255, 255, 255, 0.8);
-    --glass-border: rgba(255, 255, 255, 0.2);
-    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.9);
+    --glass-border: rgba(0, 0, 0, 0.08);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
     
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-smooth: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
     
-    --glow-blue: 0 0 30px hsl(217 91% 60% / 0.5), 0 0 60px hsl(217 91% 60% / 0.25);
-    --glow-gold: 0 0 30px hsl(45 100% 59% / 0.5), 0 0 60px hsl(45 100% 59% / 0.25);
-    --glow-red: 0 0 30px hsl(0 72% 51% / 0.5), 0 0 60px hsl(0 72% 51% / 0.25);
+    --glow-blue: 0 0 20px hsl(217 91% 60% / 0.3), 0 0 40px hsl(217 91% 60% / 0.15);
+    --glow-gold: 0 0 20px hsl(45 93% 47% / 0.3), 0 0 40px hsl(45 93% 47% / 0.15);
+    --glow-red: 0 0 20px hsl(0 72% 51% / 0.3), 0 0 40px hsl(0 72% 51% / 0.15);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 217 91% 95%;
+    --sidebar-accent-foreground: 217 91% 60%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217 91% 60%;
   }
@@ -103,15 +103,6 @@ All colors MUST be HSL.
     --border: 220 40% 15%;
     --input: 220 40% 15%;
     --ring: 217 91% 60%;
-    
-    /* Dark theme effects */
-    --glass-bg: rgba(20, 25, 40, 0.7);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-    
-    --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.2);
-    --card-shadow-hover: 0 20px 25px -5px rgb(0 0 0 / 0.4), 0 8px 10px -6px rgb(0 0 0 / 0.3);
-    --card-shadow-premium: 0 10px 40px -10px hsl(217 91% 60% / 0.6), 0 0 25px -5px hsl(217 91% 60% / 0.3);
   }
 }
 

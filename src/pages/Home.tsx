@@ -133,8 +133,8 @@ const Home = () => {
   return (
     <div className="min-h-screen overflow-hidden">
       {/* Hero Section with 3D Globe */}
-      <section className="relative min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-screen flex items-center justify-center overflow-hidden pt-16">
-      {/* 3D Minimal Globe */}
+      <section className="relative min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-gradient-to-br from-blue-50 via-white to-amber-50">
+        {/* 3D Minimal Globe */}
         <MinimalGlobeScene />
         
         {/* Flowing Waves Background */}
@@ -221,7 +221,7 @@ const Home = () => {
       </section>
 
       {/* Interactive Visa Type Selection */}
-      <section className="py-16 md:py-24 lg:py-32 relative">
+      <section className="py-16 md:py-24 lg:py-32 relative bg-gradient-to-b from-white via-blue-50/30 to-white">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
         
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
@@ -250,9 +250,9 @@ const Home = () => {
       </section>
 
       {/* Animated Timeline */}
-      <section className="py-16 md:py-24 lg:py-32 relative overflow-hidden">
+      <section className="py-16 md:py-24 lg:py-32 relative overflow-hidden bg-white">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10" />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5" />
           <motion.div
             className="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl"
             animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
@@ -293,7 +293,7 @@ const Home = () => {
       </section>
 
       {/* Bento Grid Services */}
-      <section className="py-16 md:py-24 lg:py-32 relative">
+      <section className="py-16 md:py-24 lg:py-32 relative bg-gradient-to-b from-white via-amber-50/20 to-white">
         <div className="container mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -320,8 +320,8 @@ const Home = () => {
       </section>
 
       {/* 3D Testimonials Slider */}
-      <section className="py-16 md:py-24 lg:py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-secondary/20" />
+      <section className="py-16 md:py-24 lg:py-32 relative overflow-hidden bg-white">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5" />
         
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <motion.div
@@ -349,14 +349,14 @@ const Home = () => {
       </section>
 
       {/* Holographic CTA */}
-      <section className="py-12 sm:py-16 md:py-24 lg:py-40 relative overflow-hidden">
+      <section className="py-12 sm:py-16 md:py-24 lg:py-40 relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-amber-50">
         <motion.div
           className="absolute inset-0"
           animate={{
             background: [
-              'radial-gradient(circle at 20% 50%, hsl(var(--neon-purple) / 0.3) 0%, transparent 50%)',
-              'radial-gradient(circle at 80% 50%, hsl(var(--neon-blue) / 0.3) 0%, transparent 50%)',
-              'radial-gradient(circle at 20% 50%, hsl(var(--neon-purple) / 0.3) 0%, transparent 50%)',
+              'radial-gradient(circle at 20% 50%, hsl(217 91% 60% / 0.1) 0%, transparent 50%)',
+              'radial-gradient(circle at 80% 50%, hsl(45 93% 47% / 0.1) 0%, transparent 50%)',
+              'radial-gradient(circle at 20% 50%, hsl(217 91% 60% / 0.1) 0%, transparent 50%)',
             ],
           }}
           transition={{ duration: 10, repeat: Infinity }}
@@ -367,7 +367,7 @@ const Home = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="glass-morphism max-w-4xl mx-auto p-6 sm:p-8 md:p-12 lg:p-16 rounded-2xl md:rounded-3xl neon-border"
+            className="glass-morphism max-w-4xl mx-auto p-6 sm:p-8 md:p-12 lg:p-16 rounded-2xl md:rounded-3xl shadow-2xl border border-primary/10"
           >
             <motion.h2
               className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 sm:mb-8 md:mb-10 px-2 text-gradient"
