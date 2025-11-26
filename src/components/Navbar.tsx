@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/dreamhub-logo-3d.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,8 +22,9 @@ const Navbar = () => {
     <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold text-primary">DreamHubUSA</div>
+          <Link to="/" className="flex items-center space-x-3">
+            <img src={logo} alt="DreamHubUSA Logo" className="h-12 w-12 object-contain" />
+            <div className="text-2xl font-bold text-gradient">DreamHubUSA</div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -38,8 +40,8 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Button asChild variant="default" className="bg-accent hover:bg-accent/90">
-              <a href="https://wa.me/" target="_blank" rel="noopener noreferrer">
+            <Button asChild variant="default" className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 neon-glow">
+              <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer">
                 Book Consultation
               </a>
             </Button>
@@ -70,8 +72,8 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Button asChild variant="default" className="w-full mt-4 bg-accent hover:bg-accent/90">
-              <a href="https://wa.me/" target="_blank" rel="noopener noreferrer">
+            <Button asChild variant="default" className="w-full mt-4 bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 neon-glow">
+              <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer">
                 Book Consultation
               </a>
             </Button>
