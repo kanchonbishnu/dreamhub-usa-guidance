@@ -2,7 +2,7 @@ import { Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Scene3D } from '@/components/3d/Scene3D';
-import { PremiumFloatingParticles } from '@/components/PremiumFloatingParticles';
+import { AnimatedGeometricBackground } from '@/components/AnimatedGeometricBackground';
 import { VisaTypeCard } from '@/components/VisaTypeCard';
 import { TimelineStep } from '@/components/TimelineStep';
 import { BentoServiceCard } from '@/components/BentoServiceCard';
@@ -130,13 +130,9 @@ const Home = () => {
   return (
     <div className="min-h-screen overflow-hidden">
       {/* Hero Section with 3D Globe */}
-      <section className="relative min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-screen flex items-center justify-center overflow-hidden pt-16"
-        style={{
-          background: 'linear-gradient(180deg, hsl(210 40% 96%) 0%, hsl(215 89% 98%) 40%, hsl(214 95% 96%) 100%)'
-        }}
-      >
-        {/* Premium Floating Particles */}
-        <PremiumFloatingParticles />
+      <section className="relative min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-screen flex items-center justify-center overflow-hidden pt-16">
+        {/* Animated Geometric Background */}
+        <AnimatedGeometricBackground />
         
         {/* Hero Content */}
         <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
@@ -148,7 +144,7 @@ const Home = () => {
             <motion.h1
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight px-2"
               style={{ 
-                background: 'linear-gradient(135deg, hsl(215 89% 52%), hsl(214 95% 36%), hsl(224 76% 48%))',
+                background: 'linear-gradient(135deg, #D4AF37, #FFD700, #D4AF37)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text'
@@ -174,7 +170,7 @@ const Home = () => {
             
             <motion.p
               className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-2 sm:mb-3 md:mb-4 font-semibold tracking-tight px-2"
-              style={{ color: 'hsl(222 47% 11%)' }}
+              style={{ color: '#FFFFFF' }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
@@ -184,7 +180,7 @@ const Home = () => {
             
             <motion.p
               className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 md:mb-12 max-w-2xl mx-auto px-6 sm:px-8 leading-relaxed"
-              style={{ color: 'hsl(215 16% 35%)' }}
+              style={{ color: '#E5E7EB' }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
