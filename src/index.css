@@ -216,13 +216,13 @@ All colors MUST be HSL.
   .bento-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 1.5rem;
+    gap: 1rem;
   }
   
-  @media (min-width: 768px) {
+  @media (min-width: 640px) {
     .bento-grid {
       grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
+      gap: 1.25rem;
     }
   }
   
@@ -230,7 +230,13 @@ All colors MUST be HSL.
     .bento-grid {
       grid-template-columns: repeat(4, 1fr);
       gap: 1.5rem;
-      grid-auto-rows: 250px;
+      grid-auto-rows: minmax(220px, auto);
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .bento-grid {
+      grid-auto-rows: minmax(250px, auto);
     }
   }
   

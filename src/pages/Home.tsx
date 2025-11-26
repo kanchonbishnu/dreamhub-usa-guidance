@@ -126,9 +126,9 @@ const Home = () => {
   return (
     <div className="min-h-screen overflow-hidden">
       {/* Hero Section with 3D Globe */}
-      <section className="relative min-h-[600px] md:min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-screen flex items-center justify-center overflow-hidden pt-16">
         {/* 3D Scene Background */}
-        <div className="absolute inset-0 h-[600px] md:h-full">
+        <div className="absolute inset-0 h-[500px] sm:h-[600px] md:h-[700px] lg:h-full">
           <Suspense fallback={null}>
             <Scene3D />
           </Suspense>
@@ -165,7 +165,7 @@ const Home = () => {
             transition={{ duration: 1 }}
           >
             <motion.h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 md:mb-6 text-gradient leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold mb-3 sm:mb-4 md:mb-6 text-gradient leading-tight px-2"
               animate={{ 
                 textShadow: [
                   '0 4px 20px hsl(var(--navy-blue) / 0.3)',
@@ -179,7 +179,7 @@ const Home = () => {
             </motion.h1>
             
             <motion.p
-              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-3 md:mb-4 font-semibold tracking-tight"
+              className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-2 sm:mb-3 md:mb-4 font-semibold tracking-tight px-2"
               style={{ color: 'hsl(var(--foreground))' }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -189,7 +189,7 @@ const Home = () => {
             </motion.p>
             
             <motion.p
-              className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 md:mb-12 max-w-2xl mx-auto px-4 leading-relaxed"
+              className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground mb-6 sm:mb-8 md:mb-12 max-w-2xl mx-auto px-6 sm:px-8 leading-relaxed"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
@@ -204,16 +204,16 @@ const Home = () => {
             >
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-primary via-deep-blue to-secondary hover:shadow-2xl text-white text-base sm:text-lg md:text-xl px-6 sm:px-8 md:px-12 py-4 sm:py-6 md:py-8 rounded-full font-bold glow-elegant hover:glow-premium transition-all duration-500 group relative overflow-hidden"
+                className="bg-gradient-to-r from-primary via-deep-blue to-secondary hover:shadow-2xl text-white text-sm sm:text-base md:text-lg lg:text-xl px-4 sm:px-6 md:px-8 lg:px-12 py-3 sm:py-4 md:py-6 lg:py-8 rounded-full font-bold glow-elegant hover:glow-premium transition-all duration-500 group relative overflow-hidden"
               >
                 <motion.span
                   className="relative z-10"
                   whileHover={{ scale: 1.05 }}
                 >
-                  <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 sm:gap-3">
-                    <Shield className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+                  <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 sm:gap-2 md:gap-3">
+                    <Shield className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6" />
                     <span className="whitespace-nowrap font-semibold">Begin Your Journey</span>
-                    <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+                    <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6" />
                   </a>
                 </motion.span>
                 <motion.div
@@ -253,15 +253,15 @@ const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-12 md:mb-16 lg:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 text-gradient px-4 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold mb-3 sm:mb-4 md:mb-6 text-gradient px-2 leading-tight">
               Select Your Visa Pathway
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4 leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-4 sm:px-6 leading-relaxed">
               Choose the service that aligns with your American aspirations
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-7xl mx-auto">
             {visaTypes.map((visa, index) => (
               <VisaTypeCard key={index} {...visa} index={index} />
             ))}
@@ -287,15 +287,15 @@ const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-12 md:mb-16 lg:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 text-gradient px-4 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold mb-3 sm:mb-4 md:mb-6 text-gradient px-2 leading-tight">
               Your Success Timeline
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4 leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-4 sm:px-6 leading-relaxed">
               A proven, step-by-step methodology for visa approval
             </p>
           </motion.div>
 
-          <div className="max-w-4xl mx-auto space-y-12">
+          <div className="max-w-4xl mx-auto space-y-8 md:space-y-12">
             {timelineSteps.map((step, index) => (
               <TimelineStep
                 key={index}
@@ -319,10 +319,10 @@ const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-12 md:mb-16 lg:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 text-gradient px-4 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold mb-3 sm:mb-4 md:mb-6 text-gradient px-2 leading-tight">
               Comprehensive Services
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4 leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-4 sm:px-6 leading-relaxed">
               Elite visa consulting tailored to your individual requirements
             </p>
           </motion.div>
@@ -346,15 +346,15 @@ const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-12 md:mb-16 lg:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 text-gradient px-4 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold mb-3 sm:mb-4 md:mb-6 text-gradient px-2 leading-tight">
               Client Success Stories
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4 leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-4 sm:px-6 leading-relaxed">
               Trusted by hundreds of successful visa applicants worldwide
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-7xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <TestimonialCard3D key={index} {...testimonial} index={index} />
             ))}
@@ -363,7 +363,7 @@ const Home = () => {
       </section>
 
       {/* Holographic CTA */}
-      <section className="py-16 md:py-24 lg:py-40 relative overflow-hidden">
+      <section className="py-12 sm:py-16 md:py-24 lg:py-40 relative overflow-hidden">
         <motion.div
           className="absolute inset-0"
           animate={{
@@ -381,10 +381,10 @@ const Home = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="glass-morphism max-w-4xl mx-auto p-8 sm:p-12 md:p-16 rounded-3xl neon-border"
+            className="glass-morphism max-w-4xl mx-auto p-6 sm:p-8 md:p-12 lg:p-16 rounded-2xl md:rounded-3xl neon-border"
           >
             <motion.h2
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 md:mb-8 text-gradient"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold mb-4 sm:mb-6 md:mb-8 text-gradient px-2"
               animate={{
                 textShadow: [
                   '0 0 30px hsl(var(--neon-purple) / 0.5)',
@@ -397,20 +397,20 @@ const Home = () => {
               Ready to Begin?
             </motion.h2>
             
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8 md:mb-12 px-4">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-muted-foreground mb-6 sm:mb-8 md:mb-12 px-4 sm:px-6">
               Book a free holographic consultation today
             </p>
 
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-primary via-secondary to-accent text-white text-base sm:text-lg md:text-xl lg:text-2xl px-8 sm:px-12 md:px-16 py-6 sm:py-8 md:py-10 rounded-full font-bold neon-glow relative overflow-hidden group"
+                className="bg-gradient-to-r from-primary via-secondary to-accent text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl px-6 sm:px-8 md:px-12 lg:px-16 py-4 sm:py-6 md:py-8 lg:py-10 rounded-full font-bold neon-glow relative overflow-hidden group"
               >
                 <span className="relative z-10">
-                  <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 md:gap-4">
-                    <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />
+                  <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 sm:gap-3 md:gap-4">
+                    <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-8 lg:h-8" />
                     <span className="whitespace-nowrap">Book Free Consultation</span>
-                    <Zap className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />
+                    <Zap className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-8 lg:h-8" />
                   </a>
                 </span>
                 <motion.div

@@ -33,29 +33,29 @@ export function TestimonialCard3D({ quote, author, index }: TestimonialCard3DPro
         {/* Holographic shimmer */}
         <div className="absolute inset-0 holographic" />
         
-        <CardContent className="p-8 relative z-10">
+        <CardContent className="p-4 sm:p-6 md:p-8 relative z-10">
           <motion.div
             animate={{ rotate: [0, 10, -10, 0] }}
             transition={{ duration: 5, repeat: Infinity }}
-            className="mb-4"
+            className="mb-3 md:mb-4"
           >
-            <Quote className="w-12 h-12 text-primary opacity-30" />
+            <Quote className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary opacity-30" />
           </motion.div>
           
-          <p className="text-lg mb-6 italic leading-relaxed text-foreground/90">
+          <p className="text-sm sm:text-base md:text-lg mb-4 md:mb-6 italic leading-relaxed text-foreground/90">
             "{quote}"
           </p>
           
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 md:gap-4">
             <motion.div
               whileHover={{ scale: 1.2, rotate: 360 }}
               transition={{ duration: 0.5 }}
-              className="w-12 h-12 rounded-full bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center text-white font-bold text-lg neon-glow"
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center text-white font-bold text-base sm:text-lg neon-glow flex-shrink-0"
             >
               {author.charAt(0)}
             </motion.div>
             <div>
-              <p className="font-bold text-gradient">{author}</p>
+              <p className="font-bold text-gradient text-sm sm:text-base">{author}</p>
               <div className="flex gap-1 mt-1">
                 {[...Array(5)].map((_, i) => (
                   <motion.div
@@ -64,7 +64,7 @@ export function TestimonialCard3D({ quote, author, index }: TestimonialCard3DPro
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: i * 0.1 }}
                   >
-                    <span className="text-accent">★</span>
+                    <span className="text-accent text-xs sm:text-sm">★</span>
                   </motion.div>
                 ))}
               </div>
