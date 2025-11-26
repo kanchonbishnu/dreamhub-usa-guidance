@@ -201,7 +201,7 @@ const Home = () => {
                   className="relative z-10"
                   whileHover={{ scale: 1.1 }}
                 >
-                  <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
+                  <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
                     <Sparkles className="w-6 h-6" />
                     Start Your Journey
                     <Zap className="w-6 h-6" />
@@ -400,7 +400,7 @@ const Home = () => {
                 className="bg-gradient-to-r from-primary via-secondary to-accent text-white text-2xl px-16 py-10 rounded-full font-bold neon-glow relative overflow-hidden group"
               >
                 <span className="relative z-10">
-                  <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4">
+                  <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4">
                     <Sparkles className="w-8 h-8" />
                     Book Free Consultation
                     <Zap className="w-8 h-8" />
