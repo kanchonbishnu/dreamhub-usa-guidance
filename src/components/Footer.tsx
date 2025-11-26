@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone } from "lucide-react";
+import { Mail, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -70,9 +70,9 @@ const Footer = () => {
                 </a>
               </li>
               <li className="flex items-center space-x-2 text-sm opacity-90">
-                <Phone className="h-4 w-4" />
-                <a href="https://wa.me/" className="hover:opacity-100 transition-opacity">
-                  WhatsApp
+                <MessageCircle className="h-4 w-4" />
+                <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-opacity">
+                  Telegram
                 </a>
               </li>
             </ul>
