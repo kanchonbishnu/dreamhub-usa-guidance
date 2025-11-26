@@ -69,36 +69,42 @@ const Home = () => {
       title: 'Elite University Placement',
       description: 'Strategic matching with top-tier institutions aligned with your academic goals and financial parameters.',
       size: 'large' as const,
+      link: '/services/university-placement',
     },
     {
       icon: FileCheck,
       title: 'DS-160 Mastery',
       description: 'Expert precision in every form field with comprehensive review.',
       size: 'small' as const,
+      link: '/services/ds-160',
     },
     {
       icon: MessageSquare,
       title: 'Interview Excellence',
       description: 'Proven strategies with real-world scenario preparation.',
       size: 'small' as const,
+      link: '/services/interview-prep',
     },
     {
       icon: MapPin,
       title: 'Travel Strategy',
       description: 'Complete itinerary design and comprehensive travel planning.',
       size: 'small' as const,
+      link: '/services/travel-strategy',
     },
     {
       icon: Shield,
       title: 'Document Verification',
       description: 'Rigorous quality assurance for all application materials.',
       size: 'small' as const,
+      link: '/services/document-verification',
     },
     {
       icon: Award,
       title: 'Success Optimization',
       description: 'Data-driven strategies proven to maximize visa approval rates.',
       size: 'large' as const,
+      link: '/services/success-optimization',
     },
   ];
 

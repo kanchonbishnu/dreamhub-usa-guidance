@@ -13,6 +13,12 @@ import FAQ from "./pages/FAQ";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
+import UniversityPlacement from "./pages/services/UniversityPlacement";
+import DS160Service from "./pages/services/DS160Service";
+import InterviewPrep from "./pages/services/InterviewPrep";
+import TravelStrategy from "./pages/services/TravelStrategy";
+import DocumentVerification from "./pages/services/DocumentVerification";
+import SuccessOptimization from "./pages/services/SuccessOptimization";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +33,12 @@ const App = () => (
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/university-placement" element={<UniversityPlacement />} />
+          <Route path="/services/ds-160" element={<DS160Service />} />
+          <Route path="/services/interview-prep" element={<InterviewPrep />} />
+          <Route path="/services/travel-strategy" element={<TravelStrategy />} />
+          <Route path="/services/document-verification" element={<DocumentVerification />} />
+          <Route path="/services/success-optimization" element={<SuccessOptimization />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/privacy" element={<Privacy />} />
