@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, MessageCircle } from "lucide-react";
-import logo from "@/assets/dreamhub-logo-3d.png";
+import logo from "@/assets/dreamhub-logo.png";
 
 const Footer = () => {
   return (
@@ -9,8 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
           <div className="space-y-3 sm:space-y-4">
             <div className="flex items-center space-x-2 sm:space-x-3">
-              <img src={logo} alt="DreamHubUSA Logo" className="h-10 w-10 sm:h-12 sm:w-12 object-contain" />
-              <h3 className="text-lg sm:text-xl font-bold">DreamHubUSA</h3>
+              <img src={logo} alt="DreamHubUSA Logo" className="h-12 w-12 sm:h-14 sm:w-14 object-contain" />
             </div>
             <p className="text-xs sm:text-sm opacity-90 leading-relaxed">
               Your Gateway to the United States. Professional visa support and guidance.

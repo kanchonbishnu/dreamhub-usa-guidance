@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/dreamhub-logo-3d.png";
+import logo from "@/assets/dreamhub-logo.png";
+import logoFull from "@/assets/dreamhub-logo-full.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,9 +23,9 @@ const Navbar = () => {
     <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="flex items-center space-x-3">
-            <img src={logo} alt="DreamHubUSA Logo" className="h-12 w-12 object-contain" />
-            <div className="text-2xl font-bold text-gradient">DreamHubUSA</div>
+          <Link to="/" className="flex items-center space-x-2">
+            <img src={logoFull} alt="DreamHubUSA Logo" className="h-14 object-contain hidden sm:block" />
+            <img src={logo} alt="DreamHubUSA Logo" className="h-12 object-contain sm:hidden" />
           </Link>
 
           {/* Desktop Navigation */}
