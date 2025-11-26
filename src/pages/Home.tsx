@@ -120,11 +120,13 @@ const Home = () => {
   return (
     <div className="min-h-screen overflow-hidden">
       {/* Hero Section with 3D Globe */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[600px] md:min-h-screen flex items-center justify-center overflow-hidden">
         {/* 3D Scene Background */}
-        <Suspense fallback={null}>
-          <Scene3D />
-        </Suspense>
+        <div className="absolute inset-0 h-[600px] md:h-full">
+          <Suspense fallback={null}>
+            <Scene3D />
+          </Suspense>
+        </div>
         
         {/* Animated particles */}
         <div className="absolute inset-0 opacity-30">
@@ -150,14 +152,14 @@ const Home = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="container mx-auto px-4 text-center relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
             <motion.h1
-              className="text-6xl md:text-8xl font-bold mb-6 text-gradient"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 md:mb-6 text-gradient"
               animate={{ 
                 textShadow: [
                   '0 0 20px hsl(var(--neon-blue) / 0.5)',
@@ -171,7 +173,7 @@ const Home = () => {
             </motion.h1>
             
             <motion.p
-              className="text-2xl md:text-4xl mb-4 text-neon"
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-3 md:mb-4 text-neon"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
@@ -180,7 +182,7 @@ const Home = () => {
             </motion.p>
             
             <motion.p
-              className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto"
+              className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 md:mb-12 max-w-2xl mx-auto px-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
@@ -195,16 +197,16 @@ const Home = () => {
             >
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-primary via-secondary to-accent hover:shadow-2xl text-white text-xl px-12 py-8 rounded-full font-bold neon-glow group relative overflow-hidden"
+                className="bg-gradient-to-r from-primary via-secondary to-accent hover:shadow-2xl text-white text-base sm:text-lg md:text-xl px-6 sm:px-8 md:px-12 py-4 sm:py-6 md:py-8 rounded-full font-bold neon-glow group relative overflow-hidden"
               >
                 <motion.span
                   className="relative z-10"
                   whileHover={{ scale: 1.1 }}
                 >
-                  <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
-                    <Sparkles className="w-6 h-6" />
-                    Start Your Journey
-                    <Zap className="w-6 h-6" />
+                  <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 sm:gap-3">
+                    <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+                    <span className="whitespace-nowrap">Start Your Journey</span>
+                    <Zap className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
                   </a>
                 </motion.span>
                 <motion.div
@@ -219,42 +221,42 @@ const Home = () => {
 
         {/* Floating UI elements */}
         <motion.div
-          className="absolute top-20 left-10 glass-morphism p-4 rounded-2xl"
+          className="hidden md:block absolute top-20 left-4 md:left-10 glass-morphism p-3 md:p-4 rounded-2xl"
           animate={{ y: [0, -20, 0] }}
           transition={{ duration: 4, repeat: Infinity }}
         >
-          <Globe2 className="w-8 h-8 text-primary" />
+          <Globe2 className="w-6 h-6 md:w-8 md:h-8 text-primary" />
         </motion.div>
         
         <motion.div
-          className="absolute bottom-32 right-20 glass-morphism p-4 rounded-2xl"
+          className="hidden md:block absolute bottom-32 right-4 md:right-20 glass-morphism p-3 md:p-4 rounded-2xl"
           animate={{ y: [0, 20, 0] }}
           transition={{ duration: 5, repeat: Infinity }}
         >
-          <Target className="w-8 h-8 text-secondary" />
+          <Target className="w-6 h-6 md:w-8 md:h-8 text-secondary" />
         </motion.div>
       </section>
 
       {/* Interactive Visa Type Selection */}
-      <section className="py-32 relative">
+      <section className="py-16 md:py-24 lg:py-32 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-20"
+            className="text-center mb-12 md:mb-16 lg:mb-20"
           >
-            <h2 className="text-5xl md:text-7xl font-bold mb-6 text-gradient">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 text-gradient px-4">
               Choose Your Visa Type
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
               Select the pathway that matches your American dream
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
             {visaTypes.map((visa, index) => (
               <VisaTypeCard key={index} {...visa} index={index} />
             ))}
@@ -263,7 +265,7 @@ const Home = () => {
       </section>
 
       {/* Animated Timeline */}
-      <section className="py-32 relative overflow-hidden">
+      <section className="py-16 md:py-24 lg:py-32 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10" />
           <motion.div
@@ -273,17 +275,17 @@ const Home = () => {
           />
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-20"
+            className="text-center mb-12 md:mb-16 lg:mb-20"
           >
-            <h2 className="text-5xl md:text-7xl font-bold mb-6 text-gradient">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 text-gradient px-4">
               Your Journey Timeline
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
               A step-by-step roadmap to visa success
             </p>
           </motion.div>
@@ -304,23 +306,23 @@ const Home = () => {
       </section>
 
       {/* Bento Grid Services */}
-      <section className="py-32 relative">
-        <div className="container mx-auto px-4">
+      <section className="py-16 md:py-24 lg:py-32 relative">
+        <div className="container mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-20"
+            className="text-center mb-12 md:mb-16 lg:mb-20"
           >
-            <h2 className="text-5xl md:text-7xl font-bold mb-6 text-gradient">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 text-gradient px-4">
               Our Services
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
               Comprehensive visa support tailored to your needs
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto auto-rows-fr">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-7xl mx-auto auto-rows-fr">
             {services.map((service, index) => (
               <BentoServiceCard key={index} {...service} index={index} />
             ))}
@@ -329,25 +331,25 @@ const Home = () => {
       </section>
 
       {/* 3D Testimonials Slider */}
-      <section className="py-32 relative overflow-hidden">
+      <section className="py-16 md:py-24 lg:py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-secondary/20" />
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-20"
+            className="text-center mb-12 md:mb-16 lg:mb-20"
           >
-            <h2 className="text-5xl md:text-7xl font-bold mb-6 text-gradient">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 text-gradient px-4">
               Success Stories
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
               Real experiences from our satisfied clients
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <TestimonialCard3D key={index} {...testimonial} index={index} />
             ))}
@@ -356,7 +358,7 @@ const Home = () => {
       </section>
 
       {/* Holographic CTA */}
-      <section className="py-40 relative overflow-hidden">
+      <section className="py-16 md:py-24 lg:py-40 relative overflow-hidden">
         <motion.div
           className="absolute inset-0"
           animate={{
@@ -369,15 +371,15 @@ const Home = () => {
           transition={{ duration: 10, repeat: Infinity }}
         />
 
-        <div className="container mx-auto px-4 text-center relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="glass-morphism max-w-4xl mx-auto p-16 rounded-3xl neon-border"
+            className="glass-morphism max-w-4xl mx-auto p-8 sm:p-12 md:p-16 rounded-3xl neon-border"
           >
             <motion.h2
-              className="text-5xl md:text-7xl font-bold mb-8 text-gradient"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 md:mb-8 text-gradient"
               animate={{
                 textShadow: [
                   '0 0 30px hsl(var(--neon-purple) / 0.5)',
@@ -390,20 +392,20 @@ const Home = () => {
               Ready to Begin?
             </motion.h2>
             
-            <p className="text-2xl text-muted-foreground mb-12">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8 md:mb-12 px-4">
               Book a free holographic consultation today
             </p>
 
-            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-primary via-secondary to-accent text-white text-2xl px-16 py-10 rounded-full font-bold neon-glow relative overflow-hidden group"
+                className="bg-gradient-to-r from-primary via-secondary to-accent text-white text-base sm:text-lg md:text-xl lg:text-2xl px-8 sm:px-12 md:px-16 py-6 sm:py-8 md:py-10 rounded-full font-bold neon-glow relative overflow-hidden group"
               >
                 <span className="relative z-10">
-                  <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4">
-                    <Sparkles className="w-8 h-8" />
-                    Book Free Consultation
-                    <Zap className="w-8 h-8" />
+                  <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 md:gap-4">
+                    <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />
+                    <span className="whitespace-nowrap">Book Free Consultation</span>
+                    <Zap className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />
                   </a>
                 </span>
                 <motion.div
