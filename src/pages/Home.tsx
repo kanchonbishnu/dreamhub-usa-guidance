@@ -2,9 +2,8 @@ import { Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Scene3D } from '@/components/3d/Scene3D';
-import { MinimalGlobeScene } from '@/components/3d/MinimalGlobeScene';
-import { FlowingWaves } from '@/components/FlowingWaves';
-import { SparkleParticles } from '@/components/SparkleParticles';
+import { EnhancedGlobeScene } from '@/components/EnhancedGlobeScene';
+import { PremiumAtmosphere } from '@/components/PremiumAtmosphere';
 import { TypewriterText } from '@/components/TypewriterText';
 import { VisaTypeCard } from '@/components/VisaTypeCard';
 import { TimelineStep } from '@/components/TimelineStep';
@@ -132,92 +131,129 @@ const Home = () => {
 
   return (
     <div className="min-h-screen overflow-hidden">
-      {/* Hero Section with 3D Globe */}
-      <section className="relative min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-gradient-to-br from-blue-50 via-white to-amber-50">
-        {/* 3D Minimal Globe */}
-        <MinimalGlobeScene />
+      {/* Hero Section - Premium Design */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        {/* Premium gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-amber-50" />
         
-        {/* Flowing Waves Background */}
-        <FlowingWaves />
+        {/* Enhanced 3D Globe */}
+        <EnhancedGlobeScene />
         
-        {/* Sparkle Particles */}
-        <SparkleParticles />
+        {/* Premium atmospheric effects */}
+        <PremiumAtmosphere />
         
         {/* Hero Content */}
-        <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 text-center relative z-10 py-20">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
+            {/* Premium headline with luxury gold */}
             <motion.h1
-              className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 sm:mb-6 md:mb-8 leading-tight px-2 text-gradient-gold"
-              initial={{ opacity: 0, y: 20 }}
+              className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-6 sm:mb-8 md:mb-10 leading-tight px-2"
+              style={{ 
+                background: 'linear-gradient(135deg, #D4AF37 0%, #F4D03F 30%, #FFD700 50%, #F4D03F 70%, #D4AF37 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                filter: 'drop-shadow(0 4px 12px rgba(212, 175, 55, 0.4)) drop-shadow(0 8px 24px rgba(212, 175, 55, 0.2))',
+                textShadow: '0 2px 20px rgba(212, 175, 55, 0.3)',
+              }}
+              initial={{ opacity: 0, y: 30, scale: 0.9 }}
               animate={{ 
                 opacity: 1,
                 y: 0,
+                scale: 1,
               }}
               transition={{ 
-                opacity: { duration: 1, ease: "easeOut", delay: 0 },
-                y: { duration: 1, ease: "easeOut", delay: 0 },
+                duration: 1.2,
+                ease: [0.16, 1, 0.3, 1],
+                delay: 0.2
               }}
             >
               DreamHubUSA
             </motion.h1>
-            
+
+            {/* Enhanced sub-headline */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
             >
-              <TypewriterText
-                text="Empowering Your American Dream."
-                className="font-sans text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-3 sm:mb-4 md:mb-6 font-semibold tracking-tight px-2 text-foreground"
-                typingSpeed={80}
-                cursorBlinkSpeed={0.8}
-              />
+              <p className="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 tracking-tight px-2 text-foreground leading-tight"
+                style={{
+                  textShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
+                  letterSpacing: '-0.02em',
+                }}
+              >
+                Empowering Your American Dream.
+              </p>
             </motion.div>
             
+            {/* Description */}
             <motion.p
-              className="font-sans text-base sm:text-lg md:text-xl lg:text-2xl mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto px-6 sm:px-8 leading-relaxed text-muted-foreground"
+              className="font-sans text-lg sm:text-xl md:text-2xl lg:text-3xl mb-10 sm:mb-12 md:mb-14 max-w-4xl mx-auto px-6 sm:px-8 leading-relaxed text-muted-foreground font-medium"
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.7 }}
+              style={{ letterSpacing: '-0.01em' }}
             >
-              Expert guidance and strategic support for F-1 student visas, B1/B2 visitor visas, and comprehensive U.S. immigration services.
+              Elite guidance for F-1 student visas, B1/B2 visitor visas, and comprehensive U.S. immigration services.
             </motion.p>
 
+            {/* Premium button */}
             <motion.div
               initial={{ opacity: 0, y: 20, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ 
                 duration: 0.6, 
                 ease: [0.16, 1, 0.3, 1],
-                delay: 0.5 
+                delay: 0.9 
               }}
             >
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-primary via-primary/90 to-secondary hover:shadow-2xl text-primary-foreground text-base sm:text-lg md:text-xl lg:text-2xl px-6 sm:px-8 md:px-10 lg:px-14 py-4 sm:py-5 md:py-6 lg:py-8 rounded-full font-bold hover:scale-105 transition-all duration-500 group relative overflow-hidden glow-blue"
+                className="relative overflow-hidden group text-white text-lg sm:text-xl md:text-2xl px-10 sm:px-12 md:px-16 py-6 sm:py-7 md:py-8 rounded-full font-bold transition-all duration-500 shadow-2xl"
+                style={{
+                  background: 'linear-gradient(135deg, #3B82F6 0%, #2563EB 50%, #DC2626 100%)',
+                  boxShadow: '0 10px 40px rgba(59, 130, 246, 0.3), 0 0 60px rgba(220, 38, 38, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 -2px 8px rgba(0, 0, 0, 0.2)',
+                }}
               >
                 <motion.span
-                  className="relative z-10"
+                  className="relative z-10 flex items-center gap-3"
                   whileHover={{ scale: 1.05 }}
                 >
-                  <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 sm:gap-2 md:gap-3">
-                    <Shield className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6" />
-                    <span className="whitespace-nowrap font-semibold">Begin Your Journey</span>
-                    <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6" />
+                  <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
+                    <Shield className="w-6 h-6 sm:w-7 sm:h-7" />
+                    <span className="whitespace-nowrap font-bold">Start Your Journey</span>
+                    <Sparkles className="w-6 h-6 sm:w-7 sm:h-7" />
                   </a>
                 </motion.span>
+                
+                {/* Glossy shine effect */}
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-primary/80 via-royal-blue to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                  initial={{ x: '-100%' }}
+                  animate={{ x: '200%' }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                />
+                
+                {/* Hover glow */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-primary/80 via-blue-500 to-secondary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{
+                    filter: 'blur(8px)',
+                  }}
                 />
               </Button>
             </motion.div>
           </motion.div>
         </div>
-
       </section>
 
       {/* Interactive Visa Type Selection */}
