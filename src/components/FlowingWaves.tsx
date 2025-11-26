@@ -2,7 +2,12 @@ import { motion } from 'framer-motion';
 
 export function FlowingWaves() {
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <motion.div 
+      className="absolute inset-0 overflow-hidden pointer-events-none"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.2, ease: "easeOut", delay: 0.6 }}
+    >
       {/* Flowing wave lines */}
       <svg
         className="absolute inset-0 w-full h-full"
@@ -226,6 +231,6 @@ export function FlowingWaves() {
           delay: 4,
         }}
       />
-    </div>
+    </motion.div>
   );
 }

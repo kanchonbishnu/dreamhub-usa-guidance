@@ -158,10 +158,10 @@ const Home = () => {
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text'
               }}
-              initial={{ scale: 0.5, opacity: 0 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ 
-                scale: 1,
                 opacity: 1,
+                y: 0,
                 textShadow: [
                   '0 2px 10px hsl(215 89% 52% / 0.2)',
                   '0 4px 20px hsl(214 95% 36% / 0.4)',
@@ -169,35 +169,45 @@ const Home = () => {
                 ]
               }}
               transition={{ 
-                scale: { duration: 0.8, ease: "easeOut" },
-                opacity: { duration: 0.8 },
-                textShadow: { duration: 3, repeat: Infinity }
+                opacity: { duration: 1, ease: "easeOut", delay: 0 },
+                y: { duration: 1, ease: "easeOut", delay: 0 },
+                textShadow: { duration: 3, repeat: Infinity, delay: 1 }
               }}
             >
               DreamHubUSA
             </motion.h1>
             
-            <TypewriterText
-              text="Empowering Your American Dream."
-              className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-2 sm:mb-3 md:mb-4 font-semibold tracking-tight px-2"
-              typingSpeed={80}
-              cursorBlinkSpeed={0.8}
-            />
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            >
+              <TypewriterText
+                text="Empowering Your American Dream."
+                className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-2 sm:mb-3 md:mb-4 font-semibold tracking-tight px-2"
+                typingSpeed={80}
+                cursorBlinkSpeed={0.8}
+              />
+            </motion.div>
             
             <motion.p
               className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 md:mb-12 max-w-2xl mx-auto px-6 sm:px-8 leading-relaxed"
               style={{ color: '#E5E7EB' }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
             >
               Expert guidance and strategic support for F-1 student visas, B1/B2 visitor visas, and comprehensive U.S. immigration services.
             </motion.p>
 
             <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 0.7, type: 'spring' }}
+              initial={{ opacity: 0, y: 20, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ 
+                duration: 0.6, 
+                ease: [0.16, 1, 0.3, 1],
+                delay: 0.5 
+              }}
             >
               <Button
                 size="lg"
