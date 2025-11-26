@@ -49,18 +49,30 @@ export function BentoServiceCard({
           </div>
         </motion.div>
         
-        <h3 className={`font-bold mb-2 sm:mb-3 text-gradient
-          ${size === 'large' ? 'text-xl sm:text-2xl md:text-3xl' : 'text-base sm:text-lg md:text-xl'}`}>
+        <h3 
+          className={`font-bold mb-2 sm:mb-3
+          ${size === 'large' ? 'text-xl sm:text-2xl md:text-3xl' : 'text-base sm:text-lg md:text-xl'}`}
+          style={{ 
+            background: 'linear-gradient(135deg, hsl(215 89% 52%), hsl(214 95% 36%), hsl(224 76% 48%))',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text'
+          }}
+        >
           {title}
         </h3>
         
-        <p className={`text-muted-foreground leading-relaxed
-          ${size === 'large' ? 'text-sm sm:text-base md:text-lg' : 'text-xs sm:text-sm md:text-base'}`}>
+        <p 
+          className={`leading-relaxed
+          ${size === 'large' ? 'text-sm sm:text-base md:text-lg' : 'text-xs sm:text-sm md:text-base'}`}
+          style={{ color: 'hsl(215 16% 35%)' }}
+        >
           {description}
         </p>
         
         <motion.div
-          className="mt-4 sm:mt-5 md:mt-6 text-xs sm:text-sm font-semibold text-primary group-hover:text-accent transition-colors flex items-center gap-2"
+          className="mt-4 sm:mt-5 md:mt-6 text-xs sm:text-sm font-semibold transition-colors flex items-center gap-2"
+          style={{ color: 'hsl(215 89% 52%)' }}
           whileHover={{ x: 10 }}
         >
           <span>Explore</span>
