@@ -27,16 +27,19 @@ const Home = () => {
       icon: GraduationCap,
       title: 'F-1 Student Visa',
       description: 'Comprehensive university placement, I-20 processing, and SEVIS compliance. Expert guidance from application to visa approval.',
+      link: '/visas/f1-student',
     },
     {
       icon: Plane,
       title: 'B1/B2 Visitor Visa',
       description: 'Strategic travel documentation, itinerary planning, and interview preparation for business and tourism visits.',
+      link: '/visas/b1b2-visitor',
     },
     {
       icon: FileCheck,
       title: 'DS-160 Excellence',
       description: 'Precision form completion with zero-error guarantee. Every detail verified to maximize approval chances.',
+      link: '/services/ds-160',
     },
   ];
 
