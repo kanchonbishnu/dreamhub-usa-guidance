@@ -327,7 +327,7 @@ const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-7xl mx-auto auto-rows-fr">
+          <div className="bento-grid max-w-7xl mx-auto">
             {services.map((service, index) => (
               <BentoServiceCard key={index} {...service} index={index} />
             ))}

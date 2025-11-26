@@ -20,18 +20,17 @@ export function BentoServiceCard({
   link 
 }: BentoServiceCardProps) {
   return (
-    <Link to={link}>
+    <Link to={link} className={size === 'large' ? 'lg:col-span-2 lg:row-span-2' : ''}>
       <motion.div
-      initial={{ opacity: 0, scale: 0.8 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.05 }}
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: index * 0.05 }}
         whileHover={{ 
           scale: 1.05, 
           rotateZ: size === 'large' ? 0 : 2,
         }}
-        className={`glass-morphism rounded-3xl p-8 cursor-pointer group relative overflow-hidden hover:shadow-2xl transition-all duration-500
-          ${size === 'large' ? 'col-span-1 md:col-span-2 row-span-1 md:row-span-2' : ''}`}
+        className="glass-morphism rounded-3xl p-6 md:p-8 cursor-pointer group relative overflow-hidden hover:shadow-2xl transition-all duration-500 h-full"
     >
       {/* Animated background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-deep-blue/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
