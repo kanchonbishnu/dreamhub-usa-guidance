@@ -19,6 +19,8 @@ import InterviewPrep from "./pages/services/InterviewPrep";
 import TravelStrategy from "./pages/services/TravelStrategy";
 import DocumentVerification from "./pages/services/DocumentVerification";
 import SuccessOptimization from "./pages/services/SuccessOptimization";
+import F1Student from "./pages/visas/F1Student";
+import B1B2Visitor from "./pages/visas/B1B2Visitor";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +41,8 @@ const App = () => (
           <Route path="/services/travel-strategy" element={<TravelStrategy />} />
           <Route path="/services/document-verification" element={<DocumentVerification />} />
           <Route path="/services/success-optimization" element={<SuccessOptimization />} />
+          <Route path="/visas/f1-student" element={<F1Student />} />
+          <Route path="/visas/b1b2-visitor" element={<B1B2Visitor />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/privacy" element={<Privacy />} />
