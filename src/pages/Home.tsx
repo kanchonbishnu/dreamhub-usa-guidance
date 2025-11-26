@@ -151,9 +151,9 @@ const Home = () => {
             transition={{ duration: 1 }}
           >
             <motion.h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight px-2"
+              className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 sm:mb-6 md:mb-8 leading-tight px-2"
               style={{ 
-                background: 'linear-gradient(135deg, #D4AF37, #FFD700, #D4AF37)',
+                background: 'linear-gradient(135deg, hsl(45 100% 59%), hsl(45 100% 70%), hsl(45 100% 59%))',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text'
@@ -163,9 +163,9 @@ const Home = () => {
                 opacity: 1,
                 y: 0,
                 textShadow: [
-                  '0 2px 10px hsl(215 89% 52% / 0.2)',
-                  '0 4px 20px hsl(214 95% 36% / 0.4)',
-                  '0 2px 10px hsl(215 89% 52% / 0.2)',
+                  '0 2px 10px hsl(45 100% 59% / 0.3)',
+                  '0 4px 20px hsl(45 100% 59% / 0.5)',
+                  '0 2px 10px hsl(45 100% 59% / 0.3)',
                 ]
               }}
               transition={{ 
@@ -184,15 +184,14 @@ const Home = () => {
             >
               <TypewriterText
                 text="Empowering Your American Dream."
-                className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-2 sm:mb-3 md:mb-4 font-semibold tracking-tight px-2"
+                className="font-sans text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-3 sm:mb-4 md:mb-6 font-semibold tracking-tight px-2 text-foreground"
                 typingSpeed={80}
                 cursorBlinkSpeed={0.8}
               />
             </motion.div>
             
             <motion.p
-              className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 md:mb-12 max-w-2xl mx-auto px-6 sm:px-8 leading-relaxed"
-              style={{ color: '#E5E7EB' }}
+              className="font-sans text-base sm:text-lg md:text-xl lg:text-2xl mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto px-6 sm:px-8 leading-relaxed text-muted-foreground"
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
@@ -211,7 +210,7 @@ const Home = () => {
             >
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-primary via-deep-blue to-secondary hover:shadow-2xl text-white text-sm sm:text-base md:text-lg lg:text-xl px-4 sm:px-6 md:px-8 lg:px-12 py-3 sm:py-4 md:py-6 lg:py-8 rounded-full font-bold glow-elegant hover:glow-premium transition-all duration-500 group relative overflow-hidden"
+                className="bg-gradient-to-r from-primary via-deep-blue to-secondary hover:shadow-2xl text-primary-foreground text-base sm:text-lg md:text-xl lg:text-2xl px-6 sm:px-8 md:px-10 lg:px-14 py-4 sm:py-5 md:py-6 lg:py-8 rounded-full font-bold hover:scale-105 transition-all duration-500 group relative overflow-hidden shadow-lg"
               >
                 <motion.span
                   className="relative z-10"
@@ -245,7 +244,7 @@ const Home = () => {
             className="text-center mb-12 md:mb-16 lg:mb-20"
           >
             <h2 
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold mb-3 sm:mb-4 md:mb-6 px-2 leading-tight"
+              className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 md:mb-8 px-2 leading-tight"
               style={{ 
                 background: 'linear-gradient(135deg, hsl(215 89% 52%), hsl(214 95% 36%), hsl(224 76% 48%))',
                 WebkitBackgroundClip: 'text',
@@ -255,7 +254,7 @@ const Home = () => {
             >
               Select Your Visa Pathway
             </h2>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl mx-auto px-4 sm:px-6 leading-relaxed" style={{ color: 'hsl(215 16% 35%)' }}>
+            <p className="font-sans text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto px-4 sm:px-6 leading-relaxed text-muted-foreground">
               Choose the service that aligns with your American aspirations
             </p>
           </motion.div>
@@ -287,7 +286,7 @@ const Home = () => {
             className="text-center mb-12 md:mb-16 lg:mb-20"
           >
             <h2 
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold mb-3 sm:mb-4 md:mb-6 px-2 leading-tight"
+              className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 md:mb-8 px-2 leading-tight"
               style={{ 
                 background: 'linear-gradient(135deg, hsl(215 89% 52%), hsl(214 95% 36%), hsl(224 76% 48%))',
                 WebkitBackgroundClip: 'text',
@@ -297,7 +296,7 @@ const Home = () => {
             >
               Your Success Timeline
             </h2>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl mx-auto px-4 sm:px-6 leading-relaxed" style={{ color: 'hsl(215 16% 35%)' }}>
+            <p className="font-sans text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto px-4 sm:px-6 leading-relaxed text-muted-foreground">
               A proven, step-by-step methodology for visa approval
             </p>
           </motion.div>
@@ -327,7 +326,7 @@ const Home = () => {
             className="text-center mb-12 md:mb-16 lg:mb-20"
           >
             <h2 
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold mb-3 sm:mb-4 md:mb-6 px-2 leading-tight"
+              className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 md:mb-8 px-2 leading-tight"
               style={{ 
                 background: 'linear-gradient(135deg, hsl(215 89% 52%), hsl(214 95% 36%), hsl(224 76% 48%))',
                 WebkitBackgroundClip: 'text',
@@ -337,7 +336,7 @@ const Home = () => {
             >
               Comprehensive Services
             </h2>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl mx-auto px-4 sm:px-6 leading-relaxed" style={{ color: 'hsl(215 16% 35%)' }}>
+            <p className="font-sans text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto px-4 sm:px-6 leading-relaxed text-muted-foreground">
               Elite visa consulting tailored to your individual requirements
             </p>
           </motion.div>
@@ -362,7 +361,7 @@ const Home = () => {
             className="text-center mb-12 md:mb-16 lg:mb-20"
           >
             <h2 
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold mb-3 sm:mb-4 md:mb-6 px-2 leading-tight"
+              className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 md:mb-8 px-2 leading-tight"
               style={{ 
                 background: 'linear-gradient(135deg, hsl(215 89% 52%), hsl(214 95% 36%), hsl(224 76% 48%))',
                 WebkitBackgroundClip: 'text',
@@ -372,7 +371,7 @@ const Home = () => {
             >
               Client Success Stories
             </h2>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl mx-auto px-4 sm:px-6 leading-relaxed" style={{ color: 'hsl(215 16% 35%)' }}>
+            <p className="font-sans text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto px-4 sm:px-6 leading-relaxed text-muted-foreground">
               Trusted by hundreds of successful visa applicants worldwide
             </p>
           </motion.div>
@@ -407,7 +406,7 @@ const Home = () => {
             className="glass-morphism max-w-4xl mx-auto p-6 sm:p-8 md:p-12 lg:p-16 rounded-2xl md:rounded-3xl neon-border"
           >
             <motion.h2
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold mb-4 sm:mb-6 md:mb-8 px-2"
+              className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 sm:mb-8 md:mb-10 px-2"
               style={{ 
                 background: 'linear-gradient(135deg, hsl(215 89% 52%), hsl(214 95% 36%), hsl(224 76% 48%))',
                 WebkitBackgroundClip: 'text',
@@ -418,14 +417,14 @@ const Home = () => {
               Ready to Begin?
             </motion.h2>
             
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-6 sm:mb-8 md:mb-12 px-4 sm:px-6" style={{ color: 'hsl(215 16% 35%)' }}>
+            <p className="font-sans text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-8 sm:mb-10 md:mb-12 px-4 sm:px-6 text-muted-foreground">
               Book a free consultation today
             </p>
 
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-primary via-secondary to-accent text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl px-6 sm:px-8 md:px-12 lg:px-16 py-4 sm:py-6 md:py-8 lg:py-10 rounded-full font-bold neon-glow relative overflow-hidden group"
+                className="bg-gradient-to-r from-primary via-secondary to-accent text-primary-foreground text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl px-8 sm:px-10 md:px-14 lg:px-18 py-5 sm:py-6 md:py-8 lg:py-10 rounded-full font-bold hover:scale-105 transition-all duration-500 relative overflow-hidden group shadow-xl"
               >
                 <span className="relative z-10">
                   <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 sm:gap-3 md:gap-4">

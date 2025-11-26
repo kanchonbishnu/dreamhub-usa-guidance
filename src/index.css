@@ -85,8 +85,14 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222 47% 11%;
-    --foreground: 210 40% 98%;
+    --background: 222 47% 6%;
+    --foreground: 0 0% 98%;
+    
+    --card: 222 47% 8%;
+    --card-foreground: 0 0% 98%;
+    
+    --muted: 222 47% 15%;
+    --muted-foreground: 215 20% 65%;
   }
 }
 
