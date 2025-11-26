@@ -2,6 +2,7 @@ import { Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Scene3D } from '@/components/3d/Scene3D';
+import { PremiumFloatingParticles } from '@/components/PremiumFloatingParticles';
 import { VisaTypeCard } from '@/components/VisaTypeCard';
 import { TimelineStep } from '@/components/TimelineStep';
 import { BentoServiceCard } from '@/components/BentoServiceCard';
@@ -134,6 +135,9 @@ const Home = () => {
           background: 'linear-gradient(180deg, hsl(210 40% 96%) 0%, hsl(215 89% 98%) 40%, hsl(214 95% 96%) 100%)'
         }}
       >
+        {/* Premium Floating Particles */}
+        <PremiumFloatingParticles />
+        
         {/* Hero Content */}
         <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
           <motion.div
