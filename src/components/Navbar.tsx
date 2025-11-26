@@ -40,7 +40,7 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Button asChild variant="default" className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 neon-glow">
+            <Button asChild variant="premium" className="shadow-lg">
               <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer">
                 Book Consultation
               </a>
@@ -72,7 +72,7 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Button asChild variant="default" className="w-full mt-4 bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 neon-glow">
+            <Button asChild variant="premium" className="w-full mt-4">
               <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer">
                 Book Consultation
               </a>
