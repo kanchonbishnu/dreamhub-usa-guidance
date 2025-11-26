@@ -11,82 +11,74 @@ interface TestimonialCard3DProps {
 export function TestimonialCard3D({ quote, author, index }: TestimonialCard3DProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, rotateY: -90 }}
-      whileInView={{ opacity: 1, rotateY: 0 }}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.8, delay: index * 0.2 }}
+      transition={{ duration: 0.6, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
       whileHover={{ 
-        scale: 1.05, 
-        rotateY: 5,
-        rotateX: 5,
-        z: 50 
-      }}
-      style={{ 
-        transformStyle: 'preserve-3d',
-        perspective: 1000 
+        y: -10,
+        transition: { duration: 0.3 }
       }}
     >
-      <Card className="glass-morphism border-2 border-primary/30 hover:border-primary relative overflow-hidden group">
-        {/* Animated background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+      <Card className="relative overflow-hidden group bg-white border border-primary/20 shadow-lg hover:shadow-xl transition-all duration-500">
+        {/* Gradient background on hover */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         
-        {/* Holographic shimmer */}
-        <div className="absolute inset-0 holographic" />
+        {/* Subtle shine effect */}
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent"
+          initial={{ x: '-100%' }}
+          whileHover={{ x: '200%' }}
+          transition={{ duration: 0.8 }}
+        />
         
-        <CardContent className="p-4 sm:p-6 md:p-8 relative z-10">
+        <CardContent className="p-6 sm:p-8 relative z-10">
           <motion.div
-            animate={{ rotate: [0, 10, -10, 0] }}
-            transition={{ duration: 5, repeat: Infinity }}
-            className="mb-3 md:mb-4"
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.15 + 0.3, type: 'spring' }}
+            className="mb-4"
           >
-            <Quote className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" style={{ color: 'hsl(215 89% 52% / 0.4)' }} />
+            <Quote className="w-10 h-10 sm:w-12 sm:h-12 text-primary/40" />
           </motion.div>
           
-          <p className="text-sm sm:text-base md:text-lg mb-4 md:mb-6 italic leading-relaxed" style={{ color: 'hsl(222 47% 11% / 0.9)' }}>
+          <p className="text-base sm:text-lg mb-6 italic leading-relaxed text-foreground/90 font-medium">
             "{quote}"
           </p>
           
-          <div className="flex items-center gap-3 md:gap-4">
+          <div className="flex items-center gap-4">
             <motion.div
-              whileHover={{ scale: 1.2, rotate: 360 }}
-              transition={{ duration: 0.5 }}
-              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center text-white font-bold text-base sm:text-lg neon-glow flex-shrink-0"
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.3 }}
+              className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold text-lg shadow-md flex-shrink-0"
             >
               {author.charAt(0)}
             </motion.div>
             <div>
               <p 
-                className="font-bold text-sm sm:text-base"
-                style={{ 
-                  background: 'linear-gradient(135deg, hsl(215 89% 52%), hsl(214 95% 36%), hsl(224 76% 48%))',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text'
-                }}
+                className="font-bold text-base sm:text-lg mb-1"
+                style={{ color: '#1D4ED8' }}
               >
                 {author}
               </p>
-              <div className="flex gap-1 mt-1">
+              <div className="flex gap-1">
                 {[...Array(5)].map((_, i) => (
-                  <motion.div
+                  <motion.span
                     key={i}
                     initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: i * 0.1 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.15 + 0.5 + i * 0.05 }}
+                    className="text-amber-400 text-sm"
                   >
-                    <span style={{ color: 'hsl(35 100% 50%)' }} className="text-xs sm:text-sm">★</span>
-                  </motion.div>
+                    ★
+                  </motion.span>
                 ))}
               </div>
             </div>
           </div>
         </CardContent>
-        
-        {/* 3D depth effect */}
-        <div
-          className="absolute inset-0 border-2 border-primary/20 rounded-lg pointer-events-none"
-          style={{ transform: 'translateZ(10px)' }}
-        />
       </Card>
     </motion.div>
   );

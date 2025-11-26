@@ -353,9 +353,9 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 3D Testimonials Slider */}
-      <section className="py-16 md:py-24 lg:py-32 relative overflow-hidden bg-white">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5" />
+      {/* Client Success Stories */}
+      <section className="py-16 md:py-24 lg:py-32 relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-blue-50">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
         
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <motion.div
@@ -365,11 +365,16 @@ const Home = () => {
             className="text-center mb-12 md:mb-16 lg:mb-20"
           >
             <h2 
-              className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 md:mb-8 px-2 leading-tight text-gradient"
+              className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-4 sm:mb-6 md:mb-8 px-2 leading-tight"
+              style={{ 
+                color: '#1D4ED8',
+                letterSpacing: '-0.025em',
+                textShadow: '0 2px 8px rgba(29, 78, 216, 0.15), 0 0 30px rgba(255, 255, 255, 0.4)',
+              }}
             >
               Client Success Stories
             </h2>
-            <p className="font-sans text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto px-4 sm:px-6 leading-relaxed text-muted-foreground">
+            <p className="font-sans text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto px-4 sm:px-6 leading-relaxed text-muted-foreground font-medium">
               Trusted by hundreds of successful visa applicants worldwide
             </p>
           </motion.div>
