@@ -40,9 +40,19 @@ export function TimelineStep({ step, title, description, index, isLast }: Timeli
         whileHover={{ x: 10 }}
         className="glass-morphism p-4 sm:p-5 md:p-6 rounded-xl md:rounded-2xl flex-1"
       >
-        <div className="text-xs sm:text-sm font-bold text-primary mb-1 sm:mb-2">STEP {step}</div>
-        <h4 className="text-base sm:text-lg md:text-xl font-bold mb-1 sm:mb-2 text-gradient">{title}</h4>
-        <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{description}</p>
+        <div className="text-xs sm:text-sm font-bold mb-1 sm:mb-2" style={{ color: 'hsl(215 89% 52%)' }}>STEP {step}</div>
+        <h4 
+          className="text-base sm:text-lg md:text-xl font-bold mb-1 sm:mb-2"
+          style={{ 
+            background: 'linear-gradient(135deg, hsl(215 89% 52%), hsl(214 95% 36%), hsl(224 76% 48%))',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text'
+          }}
+        >
+          {title}
+        </h4>
+        <p className="text-sm sm:text-base leading-relaxed" style={{ color: 'hsl(215 16% 35%)' }}>{description}</p>
       </motion.div>
     </motion.div>
   );

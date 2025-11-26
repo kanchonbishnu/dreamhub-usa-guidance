@@ -24,14 +24,22 @@ export function VisaTypeCard({ icon: Icon, title, description, index, link }: Vi
           </div>
         </div>
         
-        <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 md:mb-3 text-gradient group-hover:text-neon">
+        <h3 
+          className="text-lg sm:text-xl md:text-2xl font-bold mb-2 md:mb-3"
+          style={{ 
+            background: 'linear-gradient(135deg, hsl(215 89% 52%), hsl(214 95% 36%), hsl(224 76% 48%))',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text'
+          }}
+        >
           {title}
         </h3>
-        <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+        <p className="text-sm sm:text-base leading-relaxed" style={{ color: 'hsl(215 16% 35%)' }}>
           {description}
         </p>
         
-        <div className="mt-4 md:mt-6 text-xs sm:text-sm font-semibold text-secondary group-hover:text-neon-blue transition-colors">
+        <div className="mt-4 md:mt-6 text-xs sm:text-sm font-semibold transition-colors" style={{ color: 'hsl(214 95% 36%)' }}>
           Learn More →
         </div>
       </CardContent>

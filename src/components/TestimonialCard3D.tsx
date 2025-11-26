@@ -39,10 +39,10 @@ export function TestimonialCard3D({ quote, author, index }: TestimonialCard3DPro
             transition={{ duration: 5, repeat: Infinity }}
             className="mb-3 md:mb-4"
           >
-            <Quote className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary opacity-30" />
+            <Quote className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" style={{ color: 'hsl(215 89% 52% / 0.4)' }} />
           </motion.div>
           
-          <p className="text-sm sm:text-base md:text-lg mb-4 md:mb-6 italic leading-relaxed text-foreground/90">
+          <p className="text-sm sm:text-base md:text-lg mb-4 md:mb-6 italic leading-relaxed" style={{ color: 'hsl(222 47% 11% / 0.9)' }}>
             "{quote}"
           </p>
           
@@ -55,7 +55,17 @@ export function TestimonialCard3D({ quote, author, index }: TestimonialCard3DPro
               {author.charAt(0)}
             </motion.div>
             <div>
-              <p className="font-bold text-gradient text-sm sm:text-base">{author}</p>
+              <p 
+                className="font-bold text-sm sm:text-base"
+                style={{ 
+                  background: 'linear-gradient(135deg, hsl(215 89% 52%), hsl(214 95% 36%), hsl(224 76% 48%))',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text'
+                }}
+              >
+                {author}
+              </p>
               <div className="flex gap-1 mt-1">
                 {[...Array(5)].map((_, i) => (
                   <motion.div
@@ -64,7 +74,7 @@ export function TestimonialCard3D({ quote, author, index }: TestimonialCard3DPro
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: i * 0.1 }}
                   >
-                    <span className="text-accent text-xs sm:text-sm">★</span>
+                    <span style={{ color: 'hsl(35 100% 50%)' }} className="text-xs sm:text-sm">★</span>
                   </motion.div>
                 ))}
               </div>
