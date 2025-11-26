@@ -8,15 +8,15 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Professional American Color Palette */
-    --background: 222 47% 11%;
-    --foreground: 210 40% 98%;
+    /* Professional American Color Palette - Light Theme */
+    --background: 0 0% 98%;
+    --foreground: 222 47% 11%;
 
-    --card: 224 47% 14%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
 
-    --popover: 224 47% 14%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
 
     --primary: 215 89% 52%;
     --primary-foreground: 0 0% 100%;
@@ -24,17 +24,17 @@ All colors MUST be HSL.
     --secondary: 214 95% 36%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 217 33% 22%;
-    --muted-foreground: 215 16% 65%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 45%;
 
     --accent: 35 100% 50%;
-    --accent-foreground: 222 47% 11%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 217 33% 22%;
-    --input: 217 33% 22%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
     --ring: 215 89% 52%;
 
     --radius: 0.75rem;
@@ -46,19 +46,19 @@ All colors MUST be HSL.
     --gold-accent: 35 100% 50%;
     
     /* Professional gradients and effects */
-    --hero-gradient: linear-gradient(135deg, hsl(215 89% 15%) 0%, hsl(222 47% 11%) 50%, hsl(214 95% 20%) 100%);
-    --hero-mesh: radial-gradient(at 20% 30%, hsl(215 89% 52% / 0.15) 0px, transparent 50%),
-                 radial-gradient(at 80% 70%, hsl(214 95% 36% / 0.15) 0px, transparent 50%),
-                 radial-gradient(at 40% 80%, hsl(35 100% 50% / 0.08) 0px, transparent 50%);
+    --hero-gradient: linear-gradient(135deg, hsl(215 89% 96%) 0%, hsl(0 0% 100%) 50%, hsl(214 95% 96%) 100%);
+    --hero-mesh: radial-gradient(at 20% 30%, hsl(215 89% 52% / 0.08) 0px, transparent 50%),
+                 radial-gradient(at 80% 70%, hsl(214 95% 36% / 0.08) 0px, transparent 50%),
+                 radial-gradient(at 40% 80%, hsl(35 100% 50% / 0.05) 0px, transparent 50%);
     
-    --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.2);
-    --card-shadow-hover: 0 20px 40px -5px hsl(215 89% 52% / 0.25), 0 8px 16px -6px hsl(214 95% 36% / 0.2);
-    --card-shadow-3d: 0 20px 60px -10px rgb(0 0 0 / 0.4), 0 0 40px -5px hsl(215 89% 52% / 0.2);
-    --card-shadow-3d-hover: 0 30px 80px -12px rgb(0 0 0 / 0.5), 0 0 60px -5px hsl(214 95% 36% / 0.25);
+    --card-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --card-shadow-hover: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --card-shadow-3d: 0 10px 40px -10px rgb(0 0 0 / 0.15), 0 0 25px -5px hsl(215 89% 52% / 0.15);
+    --card-shadow-3d-hover: 0 20px 50px -12px rgb(0 0 0 / 0.2), 0 0 35px -5px hsl(214 95% 36% / 0.2);
     
-    --glass-bg: rgba(255, 255, 255, 0.04);
-    --glass-border: rgba(255, 255, 255, 0.12);
-    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    --glass-bg: rgba(255, 255, 255, 0.8);
+    --glass-border: rgba(0, 0, 0, 0.1);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
     
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-smooth: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
@@ -85,8 +85,8 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 220 40% 5%;
-    --foreground: 0 0% 100%;
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
   }
 }
 
@@ -123,12 +123,12 @@ All colors MUST be HSL.
   }
   
   .glass-morphism {
-    background: rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.5);
   }
   
   .card-3d {
@@ -243,9 +243,9 @@ All colors MUST be HSL.
   .holographic {
     position: relative;
     background: linear-gradient(135deg, 
-      rgba(255, 255, 255, 0.1) 0%,
-      rgba(255, 255, 255, 0.05) 50%,
-      rgba(255, 255, 255, 0.1) 100%);
+      rgba(0, 0, 0, 0.03) 0%,
+      rgba(0, 0, 0, 0.01) 50%,
+      rgba(0, 0, 0, 0.03) 100%);
     animation: holographicShift 3s ease-in-out infinite;
   }
   
