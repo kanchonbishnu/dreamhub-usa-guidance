@@ -149,14 +149,14 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            {/* Premium DreamHubUSA headline - Deep Black */}
+            {/* Premium DreamHubUSA headline - Royal Blue */}
             <motion.h1
               className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold mb-6 sm:mb-8 md:mb-10 leading-none px-2"
               style={{ 
-                color: '#0A0A0A',
+                color: '#1D4ED8',
                 letterSpacing: '-0.025em',
-                textShadow: '0 2px 8px rgba(0, 0, 0, 0.15), 0 0 30px rgba(255, 255, 255, 0.4)',
-                filter: 'drop-shadow(0 4px 12px rgba(0, 0, 0, 0.08))',
+                textShadow: '0 2px 8px rgba(29, 78, 216, 0.25), 0 0 40px rgba(255, 255, 255, 0.6)',
+                filter: 'drop-shadow(0 4px 12px rgba(29, 78, 216, 0.15))',
               }}
               initial={{ opacity: 0, y: 30, scale: 0.95 }}
               animate={{ 
