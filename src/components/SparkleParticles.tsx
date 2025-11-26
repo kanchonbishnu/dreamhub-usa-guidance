@@ -37,7 +37,12 @@ export function SparkleParticles() {
   }, []);
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <motion.div 
+      className="absolute inset-0 overflow-hidden pointer-events-none"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.5, ease: "easeOut", delay: 1 }}
+    >
       {sparkles.map((sparkle) => (
         <motion.div
           key={sparkle.id}
@@ -136,6 +141,6 @@ export function SparkleParticles() {
           }}
         />
       ))}
-    </div>
+    </motion.div>
   );
 }
