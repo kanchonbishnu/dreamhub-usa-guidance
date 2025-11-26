@@ -1,245 +1,420 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle2, Users, FileCheck, TrendingUp, Shield } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import { Suspense } from 'react';
+import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
+import { Scene3D } from '@/components/3d/Scene3D';
+import { VisaTypeCard } from '@/components/VisaTypeCard';
+import { TimelineStep } from '@/components/TimelineStep';
+import { BentoServiceCard } from '@/components/BentoServiceCard';
+import { TestimonialCard3D } from '@/components/TestimonialCard3D';
+import { 
+  GraduationCap, 
+  Plane, 
+  FileCheck, 
+  MessageSquare,
+  School,
+  MapPin,
+  Shield,
+  Sparkles,
+  Target,
+  Zap,
+  Globe2,
+  Award
+} from 'lucide-react';
 
 const Home = () => {
-  const features = [
+  const visaTypes = [
     {
-      icon: <Users className="h-8 w-8 text-secondary" />,
-      title: "Personalized Guidance",
-      description: "We review your background, goals, and documents to give you the best pathway to success.",
+      icon: GraduationCap,
+      title: 'Student Visa (F-1)',
+      description: 'Complete support for university applications, I-20, SEVIS, and visa interview preparation.',
     },
     {
-      icon: <FileCheck className="h-8 w-8 text-secondary" />,
-      title: "Experienced Visa Support",
-      description: "From DS-160 forms to university applications, we assist you through every step.",
+      icon: Plane,
+      title: 'Tourist Visa (B1/B2)',
+      description: 'Tourism and business travel guidance with itinerary planning and documentation support.',
     },
     {
-      icon: <Shield className="h-8 w-8 text-secondary" />,
-      title: "Transparent & Honest Service",
-      description: "No false promises. No guaranteed visas. Only professional support and clear guidance.",
+      icon: FileCheck,
+      title: 'DS-160 Assistance',
+      description: 'Accurate form completion to avoid common mistakes that lead to delays or denials.',
+    },
+  ];
+
+  const timelineSteps = [
+    {
+      title: 'Initial Consultation',
+      description: 'We evaluate your profile, goals, and documentation to create a personalized roadmap.',
     },
     {
-      icon: <TrendingUp className="h-8 w-8 text-secondary" />,
-      title: "Fast and Hassle-Free",
-      description: "Quick response, organized document support, and simple communication.",
+      title: 'Document Preparation',
+      description: 'Gather and organize all required documents with our comprehensive checklist.',
+    },
+    {
+      title: 'Application Processing',
+      description: 'Complete DS-160 forms, SEVIS registration, and all necessary paperwork accurately.',
+    },
+    {
+      title: 'Interview Coaching',
+      description: 'Practice with mock interviews and receive expert feedback to boost confidence.',
+    },
+    {
+      title: 'Visa Success',
+      description: 'Receive your visa and get pre-departure guidance for your journey to the USA.',
     },
   ];
 
   const services = [
-    "U.S. Student Visa (F-1) Support",
-    "U.S. Tourist Visa (B1/B2) Support",
-    "DS-160 Form Assistance",
-    "University Selection & Application Support",
-    "Mock Visa Interview Coaching",
-    "Travel Itinerary & Pre-Departure Help",
+    {
+      icon: School,
+      title: 'University Selection',
+      description: 'Find the perfect institution matching your budget, background, and career goals.',
+      size: 'large' as const,
+    },
+    {
+      icon: FileCheck,
+      title: 'DS-160 Forms',
+      description: 'Professional assistance with accurate form completion.',
+      size: 'small' as const,
+    },
+    {
+      icon: MessageSquare,
+      title: 'Interview Prep',
+      description: 'Mock interviews with real-world scenarios.',
+      size: 'small' as const,
+    },
+    {
+      icon: MapPin,
+      title: 'Travel Planning',
+      description: 'Complete itinerary and pre-departure support.',
+      size: 'small' as const,
+    },
+    {
+      icon: Shield,
+      title: 'Document Review',
+      description: 'Thorough verification of all application materials.',
+      size: 'small' as const,
+    },
+    {
+      icon: Award,
+      title: 'Success Coaching',
+      description: 'Personalized strategies for visa approval.',
+      size: 'large' as const,
+    },
   ];
 
   const testimonials = [
     {
-      quote: "DreamHubUSA made my visa process so much easier. Their interview coaching helped me get my student visa on the first attempt.",
-      author: "Aisha, Nigeria",
+      quote: 'DreamHubUSA made my visa process so much easier. Their interview coaching helped me get my student visa on the first attempt.',
+      author: 'Aisha, Nigeria',
     },
     {
-      quote: "Professional, fast, and very trustworthy.",
-      author: "Rahul, India",
+      quote: 'Professional, fast, and very trustworthy. The 3D interactive guidance was amazing!',
+      author: 'Rahul, India',
+    },
+    {
+      quote: 'The holographic consultation experience was like nothing I\'ve seen before. Highly recommend!',
+      author: 'Maria, Brazil',
     },
   ];
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section 
-        className="relative min-h-[90vh] flex items-center justify-center text-white overflow-hidden"
-        style={{
-          backgroundImage: `linear-gradient(rgba(30, 58, 138, 0.90), rgba(59, 130, 246, 0.85)), url(${heroBg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed',
-        }}
-      >
-        {/* Animated mesh gradient overlay */}
-        <div className="absolute inset-0 opacity-40" style={{
-          background: 'var(--hero-mesh)',
-          animation: 'float 20s ease-in-out infinite'
-        }} />
+    <div className="min-h-screen overflow-hidden">
+      {/* Hero Section with 3D Globe */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* 3D Scene Background */}
+        <Suspense fallback={null}>
+          <Scene3D />
+        </Suspense>
         
-        {/* Floating geometric shapes */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-20 right-10 w-40 h-40 bg-accent/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
-        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-secondary/20 rounded-full blur-2xl animate-float" style={{ animationDelay: '1.5s' }} />
-        
-        <div className="container mx-auto px-4 text-center space-y-8 animate-fade-in relative z-10">
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight drop-shadow-2xl">
-            DreamHubUSA — Your Gateway to the <span className="text-gradient bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">United States</span>
-          </h1>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto opacity-95 drop-shadow-lg font-light">
-            Guiding students and travelers with trusted visa support, step-by-step assistance, 
-            and personalized solutions to make your American dream a reality.
-          </p>
-          
-          <div className="flex flex-wrap justify-center gap-4 pt-6">
-            {[
-              { icon: CheckCircle2, text: "Student Visa Guidance" },
-              { icon: CheckCircle2, text: "Tourist Visa Support" },
-              { icon: CheckCircle2, text: "Interview Coaching" },
-              { icon: CheckCircle2, text: "Document Preparation" }
-            ].map((item, i) => (
-              <div key={i} className="glass-card flex items-center space-x-2 px-4 py-2 rounded-full hover:scale-105 transition-transform">
-                <item.icon className="h-5 w-5" />
-                <span className="font-medium">{item.text}</span>
-              </div>
-            ))}
-          </div>
-
-          <div className="pt-10">
-            <Button 
-              size="lg" 
-              className="bg-accent hover:bg-accent/90 text-white text-lg px-10 py-7 rounded-full shadow-2xl hover:shadow-accent/50 hover:scale-105 transition-all duration-300 font-semibold"
-            >
-              <a href="https://wa.me/" target="_blank" rel="noopener noreferrer">
-                Start Your Journey Today
-              </a>
-            </Button>
-          </div>
+        {/* Animated particles */}
+        <div className="absolute inset-0 opacity-30">
+          {[...Array(50)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-1 h-1 bg-primary rounded-full"
+              initial={{
+                x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1920),
+                y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1080),
+              }}
+              animate={{
+                y: [null, Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1080)],
+                opacity: [0, 1, 0],
+              }}
+              transition={{
+                duration: Math.random() * 5 + 5,
+                repeat: Infinity,
+                ease: 'linear',
+              }}
+            />
+          ))}
         </div>
-      </section>
 
-      {/* Why Choose Us Section */}
-      <section className="py-24 bg-gradient-to-b from-background via-muted/20 to-background relative overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute top-0 left-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            Why Choose <span className="text-gradient">DreamHubUSA</span>?
-          </h2>
-          <p className="text-center text-muted-foreground mb-16 text-lg max-w-2xl mx-auto">
-            Experience excellence in visa support with our comprehensive services
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <Card 
-                key={index} 
-                className="border-none card-3d group relative overflow-hidden"
-                style={{ 
-                  boxShadow: 'var(--card-shadow-3d)',
-                  animationDelay: `${index * 0.1}s`
-                }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <CardContent className="p-8 text-center space-y-4 relative z-10">
-                  <div className="flex justify-center mb-4 transform group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-bold group-hover:text-primary transition-colors">{feature.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-24 relative">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            Our <span className="text-gradient">Services</span>
-          </h2>
-          <p className="text-center text-muted-foreground mb-16 text-lg max-w-2xl mx-auto">
-            Comprehensive visa support tailored to your journey
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="group flex items-center space-x-3 p-5 rounded-xl bg-card border-2 border-border hover:border-primary transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-                style={{
-                  animationDelay: `${index * 0.05}s`,
-                }}
-              >
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/20 transition-colors">
-                  <CheckCircle2 className="h-5 w-5 text-secondary" />
-                </div>
-                <span className="font-semibold text-sm group-hover:text-primary transition-colors">{service}</span>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-16">
-            <Button 
-              asChild 
-              variant="outline" 
-              size="lg"
-              className="border-2 hover:border-primary hover:bg-primary/5 hover:scale-105 transition-all px-8 py-6 text-base font-semibold rounded-full"
-            >
-              <a href="/services">Explore All Services</a>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-24 bg-gradient-to-br from-primary via-primary to-secondary text-primary-foreground relative overflow-hidden">
-        {/* Decorative patterns */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 left-10 w-64 h-64 border-2 border-white rounded-full" />
-          <div className="absolute bottom-10 right-10 w-80 h-80 border-2 border-white rounded-full" />
-        </div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            What Our Clients Say
-          </h2>
-          <p className="text-center text-primary-foreground/80 mb-16 text-lg max-w-2xl mx-auto">
-            Real success stories from satisfied clients
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {testimonials.map((testimonial, index) => (
-              <Card 
-                key={index} 
-                className="bg-white/95 backdrop-blur-sm text-foreground border-none card-3d group"
-                style={{ boxShadow: 'var(--card-shadow-3d)' }}
-              >
-                <CardContent className="p-8 relative">
-                  <div className="absolute top-4 left-4 text-6xl text-primary/10 font-serif">"</div>
-                  <p className="text-lg mb-6 italic relative z-10 leading-relaxed">{testimonial.quote}</p>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-lg">
-                      {testimonial.author.charAt(0)}
-                    </div>
-                    <p className="font-bold text-primary">— {testimonial.author}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-28 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5" />
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
-        
+        {/* Hero Content */}
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            Ready to Start Your <span className="text-gradient">Journey</span>?
-          </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto font-light">
-            Book a free consultation today and take the first step toward your American dream.
-          </p>
-          <Button 
-            size="lg" 
-            className="bg-accent hover:bg-accent/90 text-white text-xl px-12 py-8 rounded-full shadow-2xl hover:shadow-accent/50 hover:scale-110 transition-all duration-300 font-bold"
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
           >
-            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer">
-              Book Free Consultation
-            </a>
-          </Button>
+            <motion.h1
+              className="text-6xl md:text-8xl font-bold mb-6 text-gradient"
+              animate={{ 
+                textShadow: [
+                  '0 0 20px hsl(var(--neon-blue) / 0.5)',
+                  '0 0 40px hsl(var(--neon-purple) / 0.5)',
+                  '0 0 20px hsl(var(--neon-blue) / 0.5)',
+                ]
+              }}
+              transition={{ duration: 3, repeat: Infinity }}
+            >
+              DreamHubUSA
+            </motion.h1>
+            
+            <motion.p
+              className="text-2xl md:text-4xl mb-4 text-neon"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+            >
+              Your Pathway to the USA
+            </motion.p>
+            
+            <motion.p
+              className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+            >
+              Advanced visa guidance with expert support. Experience the future of visa consulting.
+            </motion.p>
+
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ delay: 0.7, type: 'spring' }}
+            >
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-primary via-secondary to-accent hover:shadow-2xl text-white text-xl px-12 py-8 rounded-full font-bold neon-glow group relative overflow-hidden"
+              >
+                <motion.span
+                  className="relative z-10"
+                  whileHover={{ scale: 1.1 }}
+                >
+                  <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
+                    <Sparkles className="w-6 h-6" />
+                    Start Your Journey
+                    <Zap className="w-6 h-6" />
+                  </a>
+                </motion.span>
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-accent via-primary to-secondary"
+                  animate={{ x: ['0%', '100%', '0%'] }}
+                  transition={{ duration: 3, repeat: Infinity }}
+                />
+              </Button>
+            </motion.div>
+          </motion.div>
+        </div>
+
+        {/* Floating UI elements */}
+        <motion.div
+          className="absolute top-20 left-10 glass-morphism p-4 rounded-2xl"
+          animate={{ y: [0, -20, 0] }}
+          transition={{ duration: 4, repeat: Infinity }}
+        >
+          <Globe2 className="w-8 h-8 text-primary" />
+        </motion.div>
+        
+        <motion.div
+          className="absolute bottom-32 right-20 glass-morphism p-4 rounded-2xl"
+          animate={{ y: [0, 20, 0] }}
+          transition={{ duration: 5, repeat: Infinity }}
+        >
+          <Target className="w-8 h-8 text-secondary" />
+        </motion.div>
+      </section>
+
+      {/* Interactive Visa Type Selection */}
+      <section className="py-32 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-20"
+          >
+            <h2 className="text-5xl md:text-7xl font-bold mb-6 text-gradient">
+              Choose Your Visa Type
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Select the pathway that matches your American dream
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {visaTypes.map((visa, index) => (
+              <VisaTypeCard key={index} {...visa} index={index} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Animated Timeline */}
+      <section className="py-32 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10" />
+          <motion.div
+            className="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl"
+            animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
+            transition={{ duration: 8, repeat: Infinity }}
+          />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-20"
+          >
+            <h2 className="text-5xl md:text-7xl font-bold mb-6 text-gradient">
+              Your Journey Timeline
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              A step-by-step roadmap to visa success
+            </p>
+          </motion.div>
+
+          <div className="max-w-4xl mx-auto space-y-12">
+            {timelineSteps.map((step, index) => (
+              <TimelineStep
+                key={index}
+                step={index + 1}
+                title={step.title}
+                description={step.description}
+                index={index}
+                isLast={index === timelineSteps.length - 1}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Bento Grid Services */}
+      <section className="py-32 relative">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-20"
+          >
+            <h2 className="text-5xl md:text-7xl font-bold mb-6 text-gradient">
+              Our Services
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Comprehensive visa support tailored to your needs
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto auto-rows-fr">
+            {services.map((service, index) => (
+              <BentoServiceCard key={index} {...service} index={index} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 3D Testimonials Slider */}
+      <section className="py-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-secondary/20" />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-20"
+          >
+            <h2 className="text-5xl md:text-7xl font-bold mb-6 text-gradient">
+              Success Stories
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Real experiences from our satisfied clients
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {testimonials.map((testimonial, index) => (
+              <TestimonialCard3D key={index} {...testimonial} index={index} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Holographic CTA */}
+      <section className="py-40 relative overflow-hidden">
+        <motion.div
+          className="absolute inset-0"
+          animate={{
+            background: [
+              'radial-gradient(circle at 20% 50%, hsl(var(--neon-purple) / 0.3) 0%, transparent 50%)',
+              'radial-gradient(circle at 80% 50%, hsl(var(--neon-blue) / 0.3) 0%, transparent 50%)',
+              'radial-gradient(circle at 20% 50%, hsl(var(--neon-purple) / 0.3) 0%, transparent 50%)',
+            ],
+          }}
+          transition={{ duration: 10, repeat: Infinity }}
+        />
+
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="glass-morphism max-w-4xl mx-auto p-16 rounded-3xl neon-border"
+          >
+            <motion.h2
+              className="text-5xl md:text-7xl font-bold mb-8 text-gradient"
+              animate={{
+                textShadow: [
+                  '0 0 30px hsl(var(--neon-purple) / 0.5)',
+                  '0 0 60px hsl(var(--neon-blue) / 0.5)',
+                  '0 0 30px hsl(var(--neon-purple) / 0.5)',
+                ],
+              }}
+              transition={{ duration: 3, repeat: Infinity }}
+            >
+              Ready to Begin?
+            </motion.h2>
+            
+            <p className="text-2xl text-muted-foreground mb-12">
+              Book a free holographic consultation today
+            </p>
+
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-primary via-secondary to-accent text-white text-2xl px-16 py-10 rounded-full font-bold neon-glow relative overflow-hidden group"
+              >
+                <span className="relative z-10">
+                  <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4">
+                    <Sparkles className="w-8 h-8" />
+                    Book Free Consultation
+                    <Zap className="w-8 h-8" />
+                  </a>
+                </span>
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-accent to-primary"
+                  initial={{ x: '-100%' }}
+                  whileHover={{ x: '100%' }}
+                  transition={{ duration: 0.5 }}
+                />
+              </Button>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
     </div>
