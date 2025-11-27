@@ -9,6 +9,7 @@ import { VisaTypeCard } from '@/components/VisaTypeCard';
 import { TimelineStep } from '@/components/TimelineStep';
 import { BentoServiceCard } from '@/components/BentoServiceCard';
 import { TestimonialCard3D } from '@/components/TestimonialCard3D';
+import { AdvisorCard } from '@/components/AdvisorCard';
 import { 
   GraduationCap, 
   Plane, 
@@ -111,6 +112,27 @@ const Home = () => {
       description: 'Data-driven strategies proven to maximize visa approval rates.',
       size: 'large' as const,
       link: '/services/success-optimization',
+    },
+  ];
+
+  const advisors = [
+    {
+      name: 'Kanchon Kumar Bishnu',
+      qualification: 'MSCS',
+      university: 'California State University Los Angeles',
+      location: 'CA, USA',
+    },
+    {
+      name: 'Md Rakibul Hasan Tasnim',
+      qualification: 'Associate in Computer Science',
+      university: 'Los Angeles City College',
+      location: 'CA, USA',
+    },
+    {
+      name: 'Saimon Rahman Fahad',
+      qualification: 'BBA',
+      university: 'The University of South Alabama',
+      location: 'Mobile, Alabama, USA',
     },
   ];
 
@@ -348,6 +370,40 @@ const Home = () => {
           <div className="bento-grid max-w-7xl mx-auto">
             {services.map((service, index) => (
               <BentoServiceCard key={index} {...service} index={index} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Your Dedicated Advisors */}
+      <section className="py-16 md:py-24 lg:py-32 relative overflow-hidden bg-white">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-transparent to-blue-50/30" />
+        
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 md:mb-16 lg:mb-20"
+          >
+            <h2 
+              className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-4 sm:mb-6 md:mb-8 px-2 leading-tight"
+              style={{ 
+                color: '#1D4ED8',
+                letterSpacing: '-0.025em',
+                textShadow: '0 2px 8px rgba(29, 78, 216, 0.15), 0 0 30px rgba(255, 255, 255, 0.4)',
+              }}
+            >
+              Your Dedicated Advisors
+            </h2>
+            <p className="font-sans text-base sm:text-lg md:text-xl lg:text-2xl max-w-4xl mx-auto px-4 sm:px-6 leading-relaxed text-muted-foreground font-medium">
+              These dedicated advisors will stay connected with you throughout your entire journey — providing step-by-step guidance, expert insights, and personalized support to help you achieve your American Dream.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 max-w-7xl mx-auto">
+            {advisors.map((advisor, index) => (
+              <AdvisorCard key={index} {...advisor} index={index} />
             ))}
           </div>
         </div>
