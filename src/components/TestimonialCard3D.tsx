@@ -19,8 +19,9 @@ export function TestimonialCard3D({ quote, author, index }: TestimonialCard3DPro
         y: -10,
         transition: { duration: 0.3 }
       }}
+      className="h-full"
     >
-      <Card className="relative overflow-hidden group bg-white border border-primary/20 shadow-lg hover:shadow-xl transition-all duration-500">
+      <Card className="relative overflow-hidden group bg-white border border-primary/20 shadow-lg hover:shadow-xl transition-all duration-500 h-full flex flex-col">
         {/* Gradient background on hover */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         
@@ -32,7 +33,7 @@ export function TestimonialCard3D({ quote, author, index }: TestimonialCard3DPro
           transition={{ duration: 0.8 }}
         />
         
-        <CardContent className="p-6 sm:p-8 relative z-10">
+        <CardContent className="p-6 sm:p-8 relative z-10 flex flex-col flex-1">
           <motion.div
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
@@ -43,11 +44,11 @@ export function TestimonialCard3D({ quote, author, index }: TestimonialCard3DPro
             <Quote className="w-10 h-10 sm:w-12 sm:h-12 text-primary/40" />
           </motion.div>
           
-          <p className="text-base sm:text-lg mb-6 italic leading-relaxed text-foreground/90 font-medium">
+          <p className="text-base sm:text-lg mb-6 italic leading-relaxed text-foreground/90 font-medium flex-1">
             "{quote}"
           </p>
           
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 mt-auto">
             <motion.div
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.3 }}
