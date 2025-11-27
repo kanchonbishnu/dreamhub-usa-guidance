@@ -232,45 +232,45 @@ const Home = () => {
                 delay: 0.9 
               }}
             >
-              <Button
-                size="lg"
-                className="relative overflow-hidden group text-white text-base sm:text-lg md:text-xl lg:text-2xl px-8 sm:px-10 md:px-12 lg:px-16 py-5 sm:py-6 md:py-7 lg:py-8 rounded-full font-bold transition-all duration-500 shadow-2xl"
-                style={{
-                  background: 'linear-gradient(135deg, #3B82F6 0%, #2563EB 50%, #DC2626 100%)',
-                  boxShadow: '0 10px 40px rgba(59, 130, 246, 0.3), 0 0 60px rgba(220, 38, 38, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 -2px 8px rgba(0, 0, 0, 0.2)',
-                }}
-              >
-                <motion.span
-                  className="relative z-10 flex items-center gap-2 sm:gap-3"
-                  whileHover={{ scale: 1.05 }}
+              <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer">
+                <Button
+                  size="lg"
+                  className="relative overflow-hidden group text-white text-base sm:text-lg md:text-xl lg:text-2xl px-8 sm:px-10 md:px-12 lg:px-16 py-5 sm:py-6 md:py-7 lg:py-8 rounded-full font-bold transition-all duration-500 shadow-2xl"
+                  style={{
+                    background: 'linear-gradient(135deg, #3B82F6 0%, #2563EB 50%, #DC2626 100%)',
+                    boxShadow: '0 10px 40px rgba(59, 130, 246, 0.3), 0 0 60px rgba(220, 38, 38, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 -2px 8px rgba(0, 0, 0, 0.2)',
+                  }}
                 >
-                  <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 sm:gap-3">
+                  <motion.span
+                    className="relative z-10 flex items-center gap-2 sm:gap-3"
+                    whileHover={{ scale: 1.05 }}
+                  >
                     <Shield className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
                     <span className="whitespace-nowrap font-bold">Start Your Journey</span>
                     <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
-                  </a>
-                </motion.span>
-                
-                {/* Glossy shine effect */}
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-                  initial={{ x: '-100%' }}
-                  animate={{ x: '200%' }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                />
-                
-                {/* Hover glow */}
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-primary/80 via-blue-500 to-secondary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  style={{
-                    filter: 'blur(8px)',
-                  }}
-                />
-              </Button>
+                  </motion.span>
+                  
+                  {/* Glossy shine effect */}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                    initial={{ x: '-100%' }}
+                    animate={{ x: '200%' }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                  />
+                  
+                  {/* Hover glow */}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-primary/80 via-blue-500 to-secondary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    style={{
+                      filter: 'blur(8px)',
+                    }}
+                  />
+                </Button>
+              </a>
             </motion.div>
           </motion.div>
         </div>
@@ -475,21 +475,21 @@ const Home = () => {
             </p>
 
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-primary via-secondary to-accent text-primary-foreground text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl px-6 sm:px-8 md:px-12 lg:px-16 xl:px-18 py-4 sm:py-5 md:py-6 lg:py-8 xl:py-10 rounded-full font-bold hover:scale-105 transition-all duration-500 relative overflow-hidden group shadow-xl"
-              >
-                <span className="relative z-10">
-                  <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 sm:gap-3 md:gap-4">
+              <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-primary via-secondary to-accent text-primary-foreground text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl px-6 sm:px-8 md:px-12 lg:px-16 xl:px-18 py-4 sm:py-5 md:py-6 lg:py-8 xl:py-10 rounded-full font-bold hover:scale-105 transition-all duration-500 relative overflow-hidden group shadow-xl"
+                >
+                  <span className="relative z-10 flex items-center gap-2 sm:gap-3 md:gap-4">
                     <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 xl:w-8 xl:h-8" />
                     <span className="whitespace-nowrap">Book Free Consultation</span>
                     <Zap className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 xl:w-8 xl:h-8" />
-                  </a>
-                </span>
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-primary/80 to-accent/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                />
-              </Button>
+                  </span>
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-primary/80 to-accent/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  />
+                </Button>
+              </a>
             </motion.div>
           </motion.div>
         </div>
