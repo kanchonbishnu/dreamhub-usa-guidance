@@ -17,7 +17,7 @@ const FAQ = () => {
     },
     {
       question: "Do you operate internationally?",
-      answer: "Yes! We assist clients from all countries through WhatsApp, phone, email, and video calls.",
+      answer: "Yes! We assist clients from all countries through Telegram, phone, email, and video calls.",
     },
     {
       question: "How long does the visa process take?",
@@ -65,28 +65,28 @@ const FAQ = () => {
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary to-secondary text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Frequently Asked Questions</h1>
-          <p className="text-xl max-w-3xl mx-auto">
+      <section className="bg-gradient-to-r from-primary to-secondary text-white py-12 sm:py-16 md:py-20">
+        <div className="container mx-auto px-4 sm:px-6 text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 px-2">Frequently Asked Questions</h1>
+          <p className="text-base sm:text-lg md:text-xl max-w-3xl mx-auto px-2">
             Find answers to common questions about our services
           </p>
         </div>
       </section>
 
       {/* FAQ Sections */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 max-w-4xl space-y-16">
+      <section className="py-12 sm:py-16 md:py-20">
+        <div className="container mx-auto px-4 sm:px-6 max-w-4xl space-y-12 sm:space-y-16">
           {/* General Questions */}
           <div>
-            <h2 className="text-3xl font-bold mb-6">General Questions</h2>
-            <Accordion type="single" collapsible className="space-y-4">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 px-2">General Questions</h2>
+            <Accordion type="single" collapsible className="space-y-3 sm:space-y-4">
               {generalFAQs.map((faq, index) => (
-                <AccordionItem key={index} value={`general-${index}`} className="border rounded-lg px-6">
-                  <AccordionTrigger className="text-left font-semibold">
+                <AccordionItem key={index} value={`general-${index}`} className="border rounded-lg px-4 sm:px-6">
+                  <AccordionTrigger className="text-left font-semibold text-sm sm:text-base">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
+                  <AccordionContent className="text-muted-foreground text-sm sm:text-base">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -96,14 +96,14 @@ const FAQ = () => {
 
           {/* Student Visa Questions */}
           <div>
-            <h2 className="text-3xl font-bold mb-6">Student Visa (F-1) Questions</h2>
-            <Accordion type="single" collapsible className="space-y-4">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 px-2">Student Visa (F-1) Questions</h2>
+            <Accordion type="single" collapsible className="space-y-3 sm:space-y-4">
               {studentFAQs.map((faq, index) => (
-                <AccordionItem key={index} value={`student-${index}`} className="border rounded-lg px-6">
-                  <AccordionTrigger className="text-left font-semibold">
+                <AccordionItem key={index} value={`student-${index}`} className="border rounded-lg px-4 sm:px-6">
+                  <AccordionTrigger className="text-left font-semibold text-sm sm:text-base">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
+                  <AccordionContent className="text-muted-foreground text-sm sm:text-base">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -113,14 +113,14 @@ const FAQ = () => {
 
           {/* Tourist Visa Questions */}
           <div>
-            <h2 className="text-3xl font-bold mb-6">Tourist Visa (B1/B2) Questions</h2>
-            <Accordion type="single" collapsible className="space-y-4">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 px-2">Tourist Visa (B1/B2) Questions</h2>
+            <Accordion type="single" collapsible className="space-y-3 sm:space-y-4">
               {touristFAQs.map((faq, index) => (
-                <AccordionItem key={index} value={`tourist-${index}`} className="border rounded-lg px-6">
-                  <AccordionTrigger className="text-left font-semibold">
+                <AccordionItem key={index} value={`tourist-${index}`} className="border rounded-lg px-4 sm:px-6">
+                  <AccordionTrigger className="text-left font-semibold text-sm sm:text-base">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
+                  <AccordionContent className="text-muted-foreground text-sm sm:text-base">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -130,14 +130,14 @@ const FAQ = () => {
 
           {/* Payment & Support Questions */}
           <div>
-            <h2 className="text-3xl font-bold mb-6">Payment & Support Questions</h2>
-            <Accordion type="single" collapsible className="space-y-4">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 px-2">Payment & Support Questions</h2>
+            <Accordion type="single" collapsible className="space-y-3 sm:space-y-4">
               {paymentFAQs.map((faq, index) => (
-                <AccordionItem key={index} value={`payment-${index}`} className="border rounded-lg px-6">
-                  <AccordionTrigger className="text-left font-semibold">
+                <AccordionItem key={index} value={`payment-${index}`} className="border rounded-lg px-4 sm:px-6">
+                  <AccordionTrigger className="text-left font-semibold text-sm sm:text-base">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
+                  <AccordionContent className="text-muted-foreground text-sm sm:text-base">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>

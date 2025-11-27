@@ -91,27 +91,27 @@ const Services = () => {
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary to-secondary text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
-          <p className="text-xl max-w-3xl mx-auto">
+      <section className="bg-gradient-to-r from-primary to-secondary text-white py-12 sm:py-16 md:py-20">
+        <div className="container mx-auto px-4 sm:px-6 text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">Our Services</h1>
+          <p className="text-base sm:text-lg md:text-xl max-w-3xl mx-auto px-2">
             Comprehensive visa support and guidance for your U.S. journey
           </p>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <section className="py-12 sm:py-16 md:py-20">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             {services.map((service, index) => (
               <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow">
                 <CardHeader>
-                  <div className="flex items-center space-x-4 mb-4">
+                  <div className="flex items-center space-x-3 sm:space-x-4 mb-3 sm:mb-4">
                     {service.icon}
-                    <CardTitle className="text-2xl">{service.title}</CardTitle>
+                    <CardTitle className="text-lg sm:text-xl md:text-2xl">{service.title}</CardTitle>
                   </div>
-                  <p className="text-sm text-muted-foreground italic">
+                  <p className="text-xs sm:text-sm text-muted-foreground italic">
                     <span className="font-semibold">Ideal for:</span> {service.ideal}
                   </p>
                 </CardHeader>
@@ -140,21 +140,21 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Get Started?</h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+      <section className="py-12 sm:py-16 md:py-20 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">Ready to Get Started?</h2>
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
             Book your free consultation or contact us directly to begin your journey.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-accent hover:bg-accent/90 text-white">
-              <a href="https://wa.me/" target="_blank" rel="noopener noreferrer">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 px-4">
+            <Button size="lg" variant="premium">
+              <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer">
                 Book Free Consultation
               </a>
             </Button>
             <Button size="lg" variant="outline">
-              <a href="https://wa.me/" target="_blank" rel="noopener noreferrer">
-                Contact on WhatsApp
+              <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer">
+                Contact on Telegram
               </a>
             </Button>
             <Button size="lg" variant="outline">
