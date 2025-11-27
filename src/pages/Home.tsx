@@ -154,7 +154,7 @@ const Home = () => {
   return (
     <div className="min-h-screen overflow-hidden">
       {/* Hero Section - Premium Design */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      <section className="relative min-h-[90vh] sm:min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20 pb-8 sm:pb-0">
         {/* Premium gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-amber-50" />
         
@@ -165,7 +165,7 @@ const Home = () => {
         <PremiumAtmosphere />
         
         {/* Hero Content */}
-        <div className="container mx-auto px-4 sm:px-6 text-center relative z-10 py-20">
+        <div className="container mx-auto px-4 sm:px-6 text-center relative z-10 py-12 sm:py-20">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -173,7 +173,7 @@ const Home = () => {
           >
             {/* Premium DreamHubUSA headline - Royal Blue */}
             <motion.h1
-              className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold mb-6 sm:mb-8 md:mb-10 leading-none px-2"
+              className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-extrabold mb-4 sm:mb-6 md:mb-8 lg:mb-10 leading-none px-2"
               style={{ 
                 color: '#1D4ED8',
                 letterSpacing: '-0.025em',
@@ -201,7 +201,7 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
             >
-              <p className="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 tracking-tight px-2 text-foreground leading-tight"
+              <p className="font-sans text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold mb-3 sm:mb-4 md:mb-6 tracking-tight px-2 text-foreground leading-tight"
                 style={{
                   textShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
                   letterSpacing: '-0.02em',
@@ -213,7 +213,7 @@ const Home = () => {
             
             {/* Description */}
             <motion.p
-              className="font-sans text-lg sm:text-xl md:text-2xl lg:text-3xl mb-10 sm:mb-12 md:mb-14 max-w-4xl mx-auto px-6 sm:px-8 leading-relaxed text-muted-foreground font-medium"
+              className="font-sans text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl mb-8 sm:mb-10 md:mb-12 lg:mb-14 max-w-4xl mx-auto px-4 sm:px-6 md:px-8 leading-relaxed text-muted-foreground font-medium"
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.7 }}
@@ -234,20 +234,20 @@ const Home = () => {
             >
               <Button
                 size="lg"
-                className="relative overflow-hidden group text-white text-lg sm:text-xl md:text-2xl px-10 sm:px-12 md:px-16 py-6 sm:py-7 md:py-8 rounded-full font-bold transition-all duration-500 shadow-2xl"
+                className="relative overflow-hidden group text-white text-base sm:text-lg md:text-xl lg:text-2xl px-8 sm:px-10 md:px-12 lg:px-16 py-5 sm:py-6 md:py-7 lg:py-8 rounded-full font-bold transition-all duration-500 shadow-2xl"
                 style={{
                   background: 'linear-gradient(135deg, #3B82F6 0%, #2563EB 50%, #DC2626 100%)',
                   boxShadow: '0 10px 40px rgba(59, 130, 246, 0.3), 0 0 60px rgba(220, 38, 38, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 -2px 8px rgba(0, 0, 0, 0.2)',
                 }}
               >
                 <motion.span
-                  className="relative z-10 flex items-center gap-3"
+                  className="relative z-10 flex items-center gap-2 sm:gap-3"
                   whileHover={{ scale: 1.05 }}
                 >
-                  <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
-                    <Shield className="w-6 h-6 sm:w-7 sm:h-7" />
+                  <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 sm:gap-3">
+                    <Shield className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
                     <span className="whitespace-nowrap font-bold">Start Your Journey</span>
-                    <Sparkles className="w-6 h-6 sm:w-7 sm:h-7" />
+                    <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
                   </a>
                 </motion.span>
                 
@@ -277,7 +277,7 @@ const Home = () => {
       </section>
 
       {/* Interactive Visa Type Selection */}
-      <section className="py-16 md:py-24 lg:py-32 relative bg-gradient-to-b from-white via-blue-50/30 to-white">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 relative bg-gradient-to-b from-white via-blue-50/30 to-white">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
         
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
@@ -285,14 +285,14 @@ const Home = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-12 md:mb-16 lg:mb-20"
+            className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-20"
           >
             <h2 
-              className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 md:mb-8 px-2 leading-tight text-gradient"
+              className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold mb-3 sm:mb-4 md:mb-6 lg:mb-8 px-2 leading-tight text-gradient"
             >
               Select Your Visa Pathway
             </h2>
-            <p className="font-sans text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto px-4 sm:px-6 leading-relaxed text-muted-foreground">
+            <p className="font-sans text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-3xl mx-auto px-4 sm:px-6 leading-relaxed text-muted-foreground">
               Choose the service that aligns with your American aspirations
             </p>
           </motion.div>
@@ -306,7 +306,7 @@ const Home = () => {
       </section>
 
       {/* Animated Timeline */}
-      <section className="py-16 md:py-24 lg:py-32 relative overflow-hidden bg-white">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 relative overflow-hidden bg-white">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5" />
           <motion.div
@@ -324,16 +324,16 @@ const Home = () => {
             className="text-center mb-12 md:mb-16 lg:mb-20"
           >
             <h2 
-              className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 md:mb-8 px-2 leading-tight text-gradient"
+              className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold mb-3 sm:mb-4 md:mb-6 lg:mb-8 px-2 leading-tight text-gradient"
             >
               Your Success Timeline
             </h2>
-            <p className="font-sans text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto px-4 sm:px-6 leading-relaxed text-muted-foreground">
+            <p className="font-sans text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-3xl mx-auto px-4 sm:px-6 leading-relaxed text-muted-foreground">
               A proven, step-by-step methodology for visa approval
             </p>
           </motion.div>
 
-          <div className="max-w-4xl mx-auto space-y-8 md:space-y-12">
+          <div className="max-w-4xl mx-auto space-y-4 sm:space-y-6 md:space-y-8 lg:space-y-12">
             {timelineSteps.map((step, index) => (
               <TimelineStep
                 key={index}
@@ -349,25 +349,25 @@ const Home = () => {
       </section>
 
       {/* Bento Grid Services */}
-      <section className="py-16 md:py-24 lg:py-32 relative bg-gradient-to-b from-white via-amber-50/20 to-white">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 relative bg-gradient-to-b from-white via-amber-50/20 to-white">
         <div className="container mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-12 md:mb-16 lg:mb-20"
+            className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-20"
           >
             <h2 
-              className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 md:mb-8 px-2 leading-tight text-gradient"
+              className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold mb-3 sm:mb-4 md:mb-6 lg:mb-8 px-2 leading-tight text-gradient"
             >
               Comprehensive Services
             </h2>
-            <p className="font-sans text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto px-4 sm:px-6 leading-relaxed text-muted-foreground">
+            <p className="font-sans text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-3xl mx-auto px-4 sm:px-6 leading-relaxed text-muted-foreground">
               Elite visa consulting tailored to your individual requirements
             </p>
           </motion.div>
 
-          <div className="bento-grid max-w-7xl mx-auto">
+          <div className="bento-grid max-w-7xl mx-auto gap-4 sm:gap-6 md:gap-8">
             {services.map((service, index) => (
               <BentoServiceCard key={index} {...service} index={index} />
             ))}
@@ -376,7 +376,7 @@ const Home = () => {
       </section>
 
       {/* Your Dedicated Advisors */}
-      <section className="py-16 md:py-24 lg:py-32 relative overflow-hidden bg-white">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 relative overflow-hidden bg-white">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-transparent to-blue-50/30" />
         
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
@@ -384,10 +384,10 @@ const Home = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-12 md:mb-16 lg:mb-20"
+            className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-20"
           >
             <h2 
-              className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-4 sm:mb-6 md:mb-8 px-2 leading-tight"
+              className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold mb-3 sm:mb-4 md:mb-6 lg:mb-8 px-2 leading-tight"
               style={{ 
                 color: '#1D4ED8',
                 letterSpacing: '-0.025em',
@@ -396,7 +396,7 @@ const Home = () => {
             >
               Your Dedicated Advisors
             </h2>
-            <p className="font-sans text-base sm:text-lg md:text-xl lg:text-2xl max-w-4xl mx-auto px-4 sm:px-6 leading-relaxed text-muted-foreground font-medium">
+            <p className="font-sans text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-4xl mx-auto px-4 sm:px-6 leading-relaxed text-muted-foreground font-medium">
               These dedicated advisors will stay connected with you throughout your entire journey — providing step-by-step guidance, expert insights, and personalized support to help you achieve your American Dream.
             </p>
           </motion.div>
@@ -410,7 +410,7 @@ const Home = () => {
       </section>
 
       {/* Client Success Stories */}
-      <section className="py-16 md:py-24 lg:py-32 relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-blue-50">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-blue-50">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
         
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
@@ -418,10 +418,10 @@ const Home = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-12 md:mb-16 lg:mb-20"
+            className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-20"
           >
             <h2 
-              className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-4 sm:mb-6 md:mb-8 px-2 leading-tight"
+              className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold mb-3 sm:mb-4 md:mb-6 lg:mb-8 px-2 leading-tight"
               style={{ 
                 color: '#1D4ED8',
                 letterSpacing: '-0.025em',
@@ -430,7 +430,7 @@ const Home = () => {
             >
               Client Success Stories
             </h2>
-            <p className="font-sans text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto px-4 sm:px-6 leading-relaxed text-muted-foreground font-medium">
+            <p className="font-sans text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-3xl mx-auto px-4 sm:px-6 leading-relaxed text-muted-foreground font-medium">
               Trusted by hundreds of successful visa applicants worldwide
             </p>
           </motion.div>
@@ -444,7 +444,7 @@ const Home = () => {
       </section>
 
       {/* Holographic CTA */}
-      <section className="py-12 sm:py-16 md:py-24 lg:py-40 relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-amber-50">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-32 xl:py-40 relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-amber-50">
         <motion.div
           className="absolute inset-0"
           animate={{
@@ -465,25 +465,25 @@ const Home = () => {
             className="glass-morphism max-w-4xl mx-auto p-6 sm:p-8 md:p-12 lg:p-16 rounded-2xl md:rounded-3xl shadow-2xl border border-primary/10"
           >
             <motion.h2
-              className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 sm:mb-8 md:mb-10 px-2 text-gradient"
+              className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold mb-4 sm:mb-6 md:mb-8 lg:mb-10 px-2 text-gradient"
             >
               Ready to Begin?
             </motion.h2>
             
-            <p className="font-sans text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-8 sm:mb-10 md:mb-12 px-4 sm:px-6 text-muted-foreground">
+            <p className="font-sans text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl mb-6 sm:mb-8 md:mb-10 lg:mb-12 px-4 sm:px-6 text-muted-foreground">
               Book a free consultation today
             </p>
 
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-primary via-secondary to-accent text-primary-foreground text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl px-8 sm:px-10 md:px-14 lg:px-18 py-5 sm:py-6 md:py-8 lg:py-10 rounded-full font-bold hover:scale-105 transition-all duration-500 relative overflow-hidden group shadow-xl"
+                className="bg-gradient-to-r from-primary via-secondary to-accent text-primary-foreground text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl px-6 sm:px-8 md:px-12 lg:px-16 xl:px-18 py-4 sm:py-5 md:py-6 lg:py-8 xl:py-10 rounded-full font-bold hover:scale-105 transition-all duration-500 relative overflow-hidden group shadow-xl"
               >
                 <span className="relative z-10">
                   <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 sm:gap-3 md:gap-4">
-                    <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-8 lg:h-8" />
+                    <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 xl:w-8 xl:h-8" />
                     <span className="whitespace-nowrap">Book Free Consultation</span>
-                    <Zap className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-8 lg:h-8" />
+                    <Zap className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 xl:w-8 xl:h-8" />
                   </a>
                 </span>
                 <motion.div
